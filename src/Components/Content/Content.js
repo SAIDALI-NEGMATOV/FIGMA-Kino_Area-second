@@ -71,7 +71,7 @@ class Content extends Component {
                 fontWeight: "700",
                 fontSize: "18px",
                 lineHeight: "22px",
-
+                color:'rgba(255, 255, 255, 0.35)',
                 mt: "10px",
               }}
             >
@@ -84,6 +84,7 @@ class Content extends Component {
                 fontWeight: "700",
                 fontSize: "18px",
                 lineHeight: "22px",
+                color:'rgba(255, 255, 255, 0.35)',
 
                 mt: "10px",
               }}
@@ -98,6 +99,7 @@ class Content extends Component {
                 fontSize: "18px",
                 lineHeight: "22px",
                 mt: "10px",
+                color:'rgba(255, 255, 255, 0.35)',
               }}
             >
               Комедии
@@ -109,6 +111,7 @@ class Content extends Component {
                 fontWeight: "700",
                 fontSize: "18px",
                 lineHeight: "22px",
+                color:'rgba(255, 255, 255, 0.35)',
 
                 mt: "10px",
               }}
@@ -123,6 +126,7 @@ class Content extends Component {
                 fontSize: "18px",
                 lineHeight: "22px",
                 mt: "10px",
+                color:'rgba(255, 255, 255, 0.35)',
               }}
             >
               {" "}
@@ -135,7 +139,7 @@ class Content extends Component {
                 fontWeight: "700",
                 fontSize: "18px",
                 lineHeight: "22px",
-
+                color:'rgba(255, 255, 255, 0.35)',
                 mt: "10px",
               }}
             >
