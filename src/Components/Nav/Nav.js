@@ -1,8 +1,9 @@
-import { Box, Typography,Button } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
 import React, { Component } from "react";
 import Kino from "../images/Логотип (2).png";
 import Icon from "../images/icon.png";
-import Lupa from '../images/Lupa.png'
+import Lupa from "../images/Lupa.png";
+import { Link } from "react-router-dom";
 
 class Nav extends Component {
   render() {
@@ -12,43 +13,56 @@ class Nav extends Component {
         zIndex={"100"}
         bgcolor={"#1E2538"}
         display={"flex"}
-        justifyContent="center"
-        gap={'20px'}
+        justifyContent="flex-start"
+        gap={"20px"}
         sx={{ opacity: "" }}
       >
         <Box ml={"5%"} mr={"5%"} width={"90%"}>
           <Box>
-            <img src={Kino} alt="" />
+            <Link to={"/components"}>
+              <img src={Kino} alt="" />
+            </Link>
           </Box>
           <Box>
             <img src={Icon} alt="" />
           </Box>
         </Box>
-        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} gap={'15px'} mr={'250px'}>
-          <Typography
-            variant="p"
-            sx={{
-              color: "rgba(255, 255, 255, 1)",
-              fontFamily: "monospace",
-              fontSize: "17px",
-              lineHeight: "21px",
-              fontWeight: "700",
-            }}
-          >
-            Афиша
-          </Typography>
-          <Typography
-            variant="p"
-            sx={{
-              color: "rgba(255, 255, 255, 1)",
-              fontFamily: "monospace",
-              fontSize: "17px",
-              lineHeight: "21px",
-              fontWeight: "700",
-            }}
-          >
-            Медиа
-          </Typography>
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          gap={"15px"}
+          mr={"250px"}
+        >
+          <Link to={"/afisha"}>
+            <Typography
+              variant="p"
+              sx={{
+                color: "rgba(255, 255, 255, 1)",
+                fontFamily: "monospace",
+                fontSize: "17px",
+                lineHeight: "21px",
+                fontWeight: "700",
+                cursor: "pointer",
+              }}
+            >
+              Афиша
+            </Typography>
+          </Link>
+          <Link to={'/media'}>
+            <Typography
+              variant="p"
+              sx={{
+                color: "rgba(255, 255, 255, 1)",
+                fontFamily: "monospace",
+                fontSize: "17px",
+                lineHeight: "21px",
+                fontWeight: "700",
+              }}
+            >
+              Медиа
+            </Typography>
+          </Link>
           <Typography
             variant="p"
             sx={{
@@ -110,13 +124,37 @@ class Nav extends Component {
             Категории
           </Typography>
         </Box>
-        <Box display={'flex'} justifyContent={'center'} alignItems={"center"}>
-        <Box height={'45px'} width={'65px'} display={'flex'} justifyContent={'center'} alignItems={'center'} padding={'3px 20px'} borderRadius={'10px'} ml={'20px'} bgcolor={"#fff"}>
-          <img src={Lupa} alt="" />
+        <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+          <Box
+            height={"45px"}
+            width={"65px"}
+            display={"flex"}
+            justifyContent={"center"}
+            alignItems={"center"}
+            padding={"3px 20px"}
+            borderRadius={"10px"}
+            ml={"20px"}
+            bgcolor={"#fff"}
+          >
+            <img src={Lupa} alt="" />
+          </Box>
         </Box>
-        </Box>
-        <Box display={'flex'} justifyContent={'center'} alignItems={'center'} mr={'50px'}>
-          <Button sx={{backgroundColor:'rgba(54, 87, 203, 1)',color:'#fff', padding:'10px 20px',borderRadius:'10px,'}}>Войти</Button>
+        <Box
+          display={"flex"}
+          justifyContent={"center"}
+          alignItems={"center"}
+          mr={"50px"}
+        >
+          <Button
+            sx={{
+              backgroundColor: "rgba(54, 87, 203, 1)",
+              color: "#fff",
+              padding: "10px 20px",
+              borderRadius: "10px,",
+            }}
+          >
+            Войти
+          </Button>
         </Box>
       </Box>
     );
