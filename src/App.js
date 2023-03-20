@@ -5,6 +5,7 @@ import Components from "./Components/Components";
 import { Route, Routes } from "react-router";
 import Afisha from "./Afisha/Afisha";
 import Media from "./Media/Media";
+import News from "./News/News";
 
 
 class App extends Component {
@@ -16,6 +17,7 @@ class App extends Component {
           <Route path="/components" element={<Components/>} />
           <Route path="/afisha" element={<Afisha />} />
           <Route path="/media" element={<Media/>}/>
+          <Route path="/news" element={<News/>}/>
         </Routes>
       </Box>
     );

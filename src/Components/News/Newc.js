@@ -110,30 +110,71 @@ class Newc extends Component {
             flexDirection="column"
             gap="10px"
           >
-            <Box overflow={"hidden"} borderRadius="10px" position={'relative'}>
-            <Typography variant="p" position={'absolute'} color='#fff' top='5px'>15 Апр 2020</Typography>
-                <Typography variant="p" position={'absolute'} top="150px" color={'#fff'} fontSize={'15px'} fontFamily='fantasy'>
-                  Как изменили Соника с последнего анонса
-                </Typography>
+            <Box overflow={"hidden"} borderRadius="10px" position={"relative"}>
+              <Typography
+                variant="p"
+                position={"absolute"}
+                color="#fff"
+                top="5px"
+              >
+                15 Апр 2020
+              </Typography>
+              <Typography
+                variant="p"
+                position={"absolute"}
+                top="150px"
+                color={"#fff"}
+                fontSize={"15px"}
+                fontFamily="fantasy"
+              >
+                Как изменили Соника с последнего анонса
+              </Typography>
               <img src={Sonnik} alt="" />
             </Box>
             <Box overflow={"hidden"} borderRadius="10px" position={"relative"}>
-              <Box position={"absolute"}>
-              </Box>
+              <Box position={"absolute"}></Box>
               <img src={mini} alt="" />
             </Box>
             <Box overflow={"hidden"} borderRadius="10px" position={"relative"}>
-            <Typography variant="p" position={'absolute'} color='#fff' top='5px'>15 Апр 2020</Typography>
-                <Typography variant="p" position={'absolute'} top="150px" color={'#fff'} fontSize={'15px'} fontFamily='fantasy'>
-                  Как изменили Соника с последнего анонса
-                </Typography>
+              <Typography
+                variant="p"
+                position={"absolute"}
+                color="#fff"
+                top="5px"
+              >
+                15 Апр 2020
+              </Typography>
+              <Typography
+                variant="p"
+                position={"absolute"}
+                top="150px"
+                color={"#fff"}
+                fontSize={"15px"}
+                fontFamily="fantasy"
+              >
+                Как изменили Соника с последнего анонса
+              </Typography>
               <img src={yomgir} alt="" />
             </Box>
-            <Box overflow={"hidden"} borderRadius="10px" position={'relative'}>
-            <Typography variant="p" position={'absolute'} color='#fff' top='5px'>15 Апр 2020</Typography>
-                <Typography variant="p" position={'absolute'} top="150px" color={'#fff'} fontSize={'15px'} fontFamily='fantasy'>
-                  Как изменили Соника с последнего анонса
-                </Typography>
+            <Box overflow={"hidden"} borderRadius="10px" position={"relative"}>
+              <Typography
+                variant="p"
+                position={"absolute"}
+                color="#fff"
+                top="5px"
+              >
+                15 Апр 2020
+              </Typography>
+              <Typography
+                variant="p"
+                position={"absolute"}
+                top="150px"
+                color={"#fff"}
+                fontSize={"15px"}
+                fontFamily="fantasy"
+              >
+                Как изменили Соника с последнего анонса
+              </Typography>
               <img src={sahro} alt="" />
             </Box>
           </Box>

@@ -212,6 +212,7 @@ class Kadri extends Component {
               padding: "10px 20px",
               mr: "100px",
               color: "#fff",
+              mb:'50px'
             }}
           >
             Показать ещё

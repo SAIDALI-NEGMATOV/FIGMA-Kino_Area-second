@@ -533,7 +533,7 @@ class MContent extends Component {
         </Box>
         <Box width={"100%"} display="flex" justifyContent={"center"}>
           <Button
-            sx={{ border: "1px solid #fff", mt: "30px", padding: "10px 20px",mr:'100px',color:'#fff' }}
+            sx={{ border: "1px solid #fff", mt: "30px", padding: "10px 20px",mr:'100px',color:'#fff',mb:'100px' }}
           >
             Показать ещё
           </Button>

@@ -49,7 +49,7 @@ class Nav extends Component {
               Афиша
             </Typography>
           </Link>
-          <Link to={'/media'}>
+          <Link to={"/media"}>
             <Typography
               variant="p"
               sx={{
@@ -87,18 +87,20 @@ class Nav extends Component {
           >
             Актёры
           </Typography>
-          <Typography
-            variant="p"
-            sx={{
-              color: "rgba(255, 255, 255, 1)",
-              fontFamily: "monospace",
-              fontSize: "17px",
-              lineHeight: "21px",
-              fontWeight: "700",
-            }}
-          >
-            Новости
-          </Typography>
+          <Link to='/news'>
+            <Typography
+              variant="p"
+              sx={{
+                color: "rgba(255, 255, 255, 1)",
+                fontFamily: "monospace",
+                fontSize: "17px",
+                lineHeight: "21px",
+                fontWeight: "700",
+              }}
+            >
+              Новости
+            </Typography>
+          </Link>
           <Typography
             variant="p"
             sx={{
