@@ -6,6 +6,8 @@ import { Route, Routes } from "react-router";
 import Afisha from "./Afisha/Afisha";
 import Media from "./Media/Media";
 import News from "./News/News";
+import Voyti from "./Voyti/Voyti";
+import Reg from "./Reg/Reg";
 
 
 class App extends Component {
@@ -18,6 +20,8 @@ class App extends Component {
           <Route path="/afisha" element={<Afisha />} />
           <Route path="/media" element={<Media/>}/>
           <Route path="/news" element={<News/>}/>
+          <Route path='/Voyti' element={<Voyti/>}/>
+          <Route path='/Reg' element={<Reg/>}/>
         </Routes>
       </Box>
     );

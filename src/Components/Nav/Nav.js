@@ -6,6 +6,15 @@ import Lupa from "../images/Lupa.png";
 import { Link } from "react-router-dom";
 
 class Nav extends Component {
+  state={
+    Search :true,
+  }
+
+  SearchBTN=()=>{
+    if (this.state.Search === true) {
+      alert('salom')
+    }
+  }
   render() {
     return (
       <Box
@@ -87,7 +96,7 @@ class Nav extends Component {
           >
             Актёры
           </Typography>
-          <Link to='/news'>
+          <Link to="/news">
             <Typography
               variant="p"
               sx={{
@@ -128,17 +137,17 @@ class Nav extends Component {
         </Box>
         <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
           <Box
-            height={"45px"}
-            width={"65px"}
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
             padding={"3px 20px"}
             borderRadius={"10px"}
             ml={"20px"}
-            bgcolor={"#fff"}
           >
-            <img src={Lupa} alt="" />
+            <Button onClick={this.SearchBTN}  variant="contained" sx={{ bgcolor: "#fff", color: "blue" }}>
+              {" "}
+              <img src={Lupa} alt="" style={{padding:'7px 20px',}}  />
+            </Button>
           </Box>
         </Box>
         <Box
@@ -147,6 +156,7 @@ class Nav extends Component {
           alignItems={"center"}
           mr={"50px"}
         >
+          <Link to='/Voyti'>
           <Button
             sx={{
               backgroundColor: "rgba(54, 87, 203, 1)",
@@ -154,9 +164,10 @@ class Nav extends Component {
               padding: "10px 20px",
               borderRadius: "10px,",
             }}
-          >
+            >
             Войти
           </Button>
+            </Link>
         </Box>
       </Box>
     );
