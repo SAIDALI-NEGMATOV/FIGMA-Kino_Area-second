@@ -109,6 +109,7 @@ class Voyti extends Component {
               Зарегистрироваться
             </Button>
               </Link>
+              <Link to='/Pasword'>
             <Typography
               variant="h2"
               sx={{
@@ -121,9 +122,10 @@ class Voyti extends Component {
                 textAlign: "center",
                 // mb: "10px",
               }}
-            >
+              >
               Восстановить пароль
             </Typography>
+              </Link>
             <Box display={"flex"} justifyContent="center" gap="10px">
               <Box
                 padding={"10px 12px"}

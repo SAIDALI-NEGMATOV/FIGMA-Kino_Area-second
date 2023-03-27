@@ -24,6 +24,7 @@ class Content extends Component {
           sx={{
             backgroundImage: `url(${Back})`,
             backgroundRepeat: "no-repeat",
+            backgroundColor:"#1E2538",
             backgroundSize: "100% 100%",
             backgroundBlendMode: "multiply",
           }}

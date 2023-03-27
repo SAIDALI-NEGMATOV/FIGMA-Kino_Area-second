@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Box, Typography } from "@mui/material";
-import Back from "../images/back.jpg";
+import Back from "../images/back.jpg"
 import logo from "../images/logo.png";
 
 class Email extends Component {

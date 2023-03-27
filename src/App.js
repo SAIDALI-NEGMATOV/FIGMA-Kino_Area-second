@@ -8,6 +8,8 @@ import Media from "./Media/Media";
 import News from "./News/News";
 import Voyti from "./Voyti/Voyti";
 import Reg from "./Reg/Reg";
+import Pasword from "./Pasword/Pasword";
+import Parol from "./Parol/Parol";
 
 
 class App extends Component {
@@ -22,6 +24,8 @@ class App extends Component {
           <Route path="/news" element={<News/>}/>
           <Route path='/Voyti' element={<Voyti/>}/>
           <Route path='/Reg' element={<Reg/>}/>
+          <Route path="/Pasword" element={<Pasword/>}/>
+          <Route path='/Parol' element={<Parol/>}/>
         </Routes>
       </Box>
     );
