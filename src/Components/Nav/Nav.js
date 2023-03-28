@@ -28,7 +28,7 @@ class Nav extends Component {
       >
         <Box ml={"5%"} mr={"5%"} width={"90%"}>
           <Box>
-            <Link to={"/components"}>
+            <Link to={"/"}>
               <img src={Kino} alt="" />
             </Link>
           </Box>
@@ -110,18 +110,20 @@ class Nav extends Component {
               Новости
             </Typography>
           </Link>
-          <Typography
-            variant="p"
-            sx={{
-              color: "rgba(255, 255, 255, 1)",
-              fontFamily: "monospace",
-              fontSize: "17px",
-              lineHeight: "21px",
-              fontWeight: "700",
-            }}
-          >
-            Подборки
-          </Typography>
+          <Link to='/Podborki'>
+            <Typography
+              variant="p"
+              sx={{
+                color: "rgba(255, 255, 255, 1)",
+                fontFamily: "monospace",
+                fontSize: "17px",
+                lineHeight: "21px",
+                fontWeight: "700",
+              }}
+            >
+              Подборки
+            </Typography>
+          </Link>
           <Typography
             variant="p"
             sx={{

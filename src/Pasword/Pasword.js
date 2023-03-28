@@ -56,7 +56,7 @@ class Pasword extends Component {
             <form action="">
               <input
                 type="text"
-                value={"Почта или номер телефона"}
+                placeholder={"Почта или номер телефона"}
                 style={{
                   padding: "15px 100px",
                   backgroundColor: "rgba(30, 37, 56, 1)",
@@ -75,7 +75,7 @@ class Pasword extends Component {
               <form action="" style={{ display: "flex", gap: "10px" }}>
                 <input
                   type="submit"
-                  value={"Отправить"}
+                  placeholder={"Отправить"}
                   style={{
                     padding: "15px 50px",
                     backgroundColor: "rgba(54, 87, 203, 1)",
@@ -91,7 +91,7 @@ class Pasword extends Component {
                 />
                 <input
                   type="text"
-                  value={"Полученный код"}
+                  placeholder={"Полученный код"}
                   style={{
                     padding: "15px 10px",
                     backgroundColor: "rgba(30, 37, 56, 1)",

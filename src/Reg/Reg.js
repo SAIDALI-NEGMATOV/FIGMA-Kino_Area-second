@@ -43,7 +43,7 @@ class Reg extends Component {
             </Typography>
             <input
               type="text"
-              value={"Имя"}
+              placeholder={"Имя"}
               style={{
                 padding: "15px 100px",
                 backgroundColor: "rgba(30, 37, 56, 1)",
@@ -59,7 +59,7 @@ class Reg extends Component {
             />
             <input
               type="text"
-              value={"Фамилия"}
+              placeholder={"Фамилия"}
               style={{
                 padding: "15px 100px",
                 backgroundColor: "rgba(30, 37, 56, 1)",
@@ -75,7 +75,7 @@ class Reg extends Component {
             />
             <input
               type="text"
-              value={"Придумайте логин"}
+              placeholder={"Придумайте логин"}
               style={{
                 padding: "15px 100px",
                 backgroundColor: "rgba(30, 37, 56, 1)",
@@ -91,7 +91,7 @@ class Reg extends Component {
             />
             <input
               type="text"
-              value={"Придумайте пароль"}
+              placeholder={"Придумайте пароль"}
               style={{
                 padding: "15px 100px",
                 backgroundColor: "rgba(30, 37, 56, 1)",
@@ -107,7 +107,7 @@ class Reg extends Component {
             />
             <input
               type="text"
-              value={"Повторите пароль"}
+              placeholder={"Повторите пароль"}
               style={{
                 padding: "15px 100px",
                 backgroundColor: "rgba(30, 37, 56, 1)",
@@ -123,7 +123,7 @@ class Reg extends Component {
             />
             <input
               type="text"
-              value={"Номер телефона или e-mail"}
+              placeholder={"Номер телефона или e-mail"}
               style={{
                 padding: "15px 100px",
                 backgroundColor: "rgba(30, 37, 56, 1)",
@@ -154,7 +154,7 @@ class Reg extends Component {
             </Box>
             <input
               type="submit"
-              value={"Зарегистрироваться"}
+              placeholder={"Зарегистрироваться"}
               style={{
                 padding: "15px 120px",
                 backgroundColor: "rgba(242, 246, 15, 1)",

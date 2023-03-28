@@ -10,6 +10,8 @@ import Voyti from "./Voyti/Voyti";
 import Reg from "./Reg/Reg";
 import Pasword from "./Pasword/Pasword";
 import Parol from "./Parol/Parol";
+import Podbor from "./Podborki/Podbor";
+
 
 
 class App extends Component {
@@ -18,7 +20,7 @@ class App extends Component {
       <Box overflow={"hidden"}>
         <Nav />
         <Routes>
-          <Route path="/components" element={<Components/>} />
+          <Route path="/" element={<Components/>} />
           <Route path="/afisha" element={<Afisha />} />
           <Route path="/media" element={<Media/>}/>
           <Route path="/news" element={<News/>}/>
@@ -26,6 +28,8 @@ class App extends Component {
           <Route path='/Reg' element={<Reg/>}/>
           <Route path="/Pasword" element={<Pasword/>}/>
           <Route path='/Parol' element={<Parol/>}/>
+          <Route path="/Podbor" element={Podbor}/>
+
         </Routes>
       </Box>
     );

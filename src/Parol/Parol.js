@@ -51,7 +51,7 @@ class Parol extends Component {
             <form action="">
               <input
                 type="text"
-                value={"Придумайте новый пароль"}
+                placeholder={"Придумайте новый пароль"}
                 style={{
                   padding: "15px 100px",
                   backgroundColor: "rgba(30, 37, 56, 1)",
@@ -67,7 +67,7 @@ class Parol extends Component {
               />
               <input
                 type="text"
-                value={"Подтвердите новый пароль"}
+                placeholder={"Подтвердите новый пароль"}
                 style={{
                   padding: "15px 100px",
                   backgroundColor: "rgba(30, 37, 56, 1)",

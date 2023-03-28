@@ -45,7 +45,7 @@ class Voyti extends Component {
             </Typography>
             <input
               type="text"
-              value={"Логин, почта или телефон"}
+              placeholder={"Логин, почта или телефон"}
               style={{
                 padding: "15px 100px",
                 backgroundColor: "rgba(30, 37, 56, 1)",
@@ -55,12 +55,12 @@ class Voyti extends Component {
                 display: "flex",
                 justifyContent: "flex-start",
                 alignItems: "flex-start",
-                textAlign: "start",
+                textAlign: "center",
                 marginBottom: "15px",
               }}
             />
             <input
-              value={"Ваш пароль"}
+              placeholder={"Ваш пароль"}
               type="text"
               style={{
                 padding: "15px 100px",
@@ -77,9 +77,9 @@ class Voyti extends Component {
             />
             <input
               type="submit"
-              value={"Войти"}
+              placeholder={"Войти"}
               style={{
-                padding: "15px 163px",
+                padding: "15px 150px",
                 backgroundColor: "rgba(242, 246, 15, 1)",
                 border: "0px",
                 borderRadius: "10px",
@@ -169,7 +169,7 @@ class Voyti extends Component {
               </Box>
             </Box>
           </form>
-          <Link to="/components">
+          <Link to="/">
             <Box>
               <Button>
                 <i
