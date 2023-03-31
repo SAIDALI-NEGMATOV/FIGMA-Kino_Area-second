@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Box } from "@mui/material";
+import { Box,ThemeProvider } from "@mui/material";
 import Nav from "./Components/Nav/Nav";
 import Components from "./Components/Components";
 import { Route, Routes } from "react-router";
@@ -11,12 +11,15 @@ import Reg from "./Reg/Reg";
 import Pasword from "./Pasword/Pasword";
 import Parol from "./Parol/Parol";
 import Podbor from "./Podborki/Podbor";
+import theme from "./Components/Style/Style";
+import Films from "./Films/Films";
 
 
 
 class App extends Component {
   render() {
     return (
+      <ThemeProvider theme={theme}>
       <Box overflow={"hidden"}>
         <Nav />
         <Routes>
@@ -28,10 +31,11 @@ class App extends Component {
           <Route path='/Reg' element={<Reg/>}/>
           <Route path="/Pasword" element={<Pasword/>}/>
           <Route path='/Parol' element={<Parol/>}/>
-          <Route path="/Podbor" element={Podbor}/>
-
+          <Route path='/Podbor' element={<Podbor/>}/>
+          <Route path='/Films' element={<Films/>}/>
         </Routes>
       </Box>
+      </ThemeProvider>
     );
   }
 }

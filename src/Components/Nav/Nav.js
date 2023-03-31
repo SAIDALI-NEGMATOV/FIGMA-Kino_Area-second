@@ -27,7 +27,7 @@ class Nav extends Component {
         sx={{ opacity: "" }}
       >
         <Box ml={"5%"} mr={"5%"} width={"90%"}>
-          <Box>
+          <Box >
             <Link to={"/"}>
               <img src={Kino} alt="" />
             </Link>
@@ -72,6 +72,7 @@ class Nav extends Component {
               Медиа
             </Typography>
           </Link>
+          <Link to='/Films'>
           <Typography
             variant="p"
             sx={{
@@ -84,6 +85,7 @@ class Nav extends Component {
           >
             Фильмы
           </Typography>
+          </Link>
           <Typography
             variant="p"
             sx={{
@@ -110,7 +112,7 @@ class Nav extends Component {
               Новости
             </Typography>
           </Link>
-          <Link to='/Podborki'>
+          <Link to='/Podbor'>
             <Typography
               variant="p"
               sx={{
