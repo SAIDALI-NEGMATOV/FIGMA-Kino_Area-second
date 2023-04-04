@@ -80,7 +80,14 @@ class Content extends Component {
                 },
               }}
             ></Box>
-            <Box gap="40px" display={"flex"}>
+            <Box  display={"flex"}
+            sx={{
+              gap: {
+                Planshet:'20px',
+                NoteL:'40px',
+              }
+            }}
+            >
               <Typography
                 variant="p"
                 sx={{
@@ -185,14 +192,25 @@ class Content extends Component {
                   sx={[
                     {
                       borderRadius: "10px",
-                      width: "100%",
+                        width:{
+                          NoteL:'350px',
+                          Planshet:'180px'
+                        },
+                        height:{
+                          NoteL:'450px',
+                          Planshet:'300px'
+                        }
+                      ,
                       overflow: "hidden",
-                      height: "450px",
                       position: "relative",
+                      marginLeft:{
+                        Planshet:'8px',
+                        NateL:'0px'
+                      }
                     }
                   ]}
                 >
-                  <img src={Escape} alt="" />
+                  <img src={Escape} alt="" style={{width:'100%',height:'100%'}}/>
                   <Box
                     sx={[
                       {
@@ -249,15 +267,29 @@ class Content extends Component {
                   Триллер
                 </Typography>
               </Box>
-              <Box>
+              <Box 
+                  // border={'1px solid red'}
+
+              >
                 <Box
                   borderRadius={"10px"}
-                  width="100%"
+                  // width="100%"
                   overflow={"hidden"}
                   height={"450px"}
                   position={'relative'}
+                  // border={'1px solid red'}
+                  sx={{
+                    width:{
+                      NoteL:'350px',
+                      Planshet:'180px'
+                    },
+                    height:{
+                      NoteL:'',
+                      Planshet:'300px'
+                    }
+                  }}
                 >
-                  <img src={Jokker} alt="" />
+                  <img src={Jokker} alt="" style={{width:'100%',height:'100%'}}/>
                   <Box
                     sx={[
                       {
@@ -321,8 +353,18 @@ class Content extends Component {
                   overflow={"hidden"}
                   height={"450px"}
                   position={'relative'}
+                  sx={{
+                    width:{
+                      NoteL:'300px',
+                      Planshet:'180px'
+                    },
+                    height:{
+                          NoteL:'450px',
+                      Planshet:'300px'
+                    }
+                  }}
                 >
-                  <img src={opoqi} alt="" />
+                  <img src={opoqi} alt="" style={{width:"100%",height:'100%'}}/>
                   <Box
                     sx={[
                       {
@@ -363,7 +405,7 @@ class Content extends Component {
                     color: "#FFF",
                   }}
                 >
-                  Звёздные войны: Скайуокер. Восход
+                  Звёздные войны: 
                 </Typography>
                 <Typography
                   variant="p"
@@ -376,7 +418,7 @@ class Content extends Component {
                     color: "#F2F60F",
                   }}
                 >
-                  Фантастика, фэнтези, боевик, приключения
+                  Фантастика, фэнтези, 
                 </Typography>
               </Box>
               <Box>
@@ -386,8 +428,18 @@ class Content extends Component {
                   overflow={"hidden"}
                   height={"450px"}
                   position={'relative'}
+                  sx={{
+                    width:{
+                      NoteL:'300px',
+                      Planshet:'180px'
+                    },
+                    height:{
+                          NoteL:'450px',
+                      Planshet:'300px'
+                    }
+                  }}
                 >
-                  <img src={Xennam} alt="" />
+                  <img src={Xennam} alt="" style={{width:'100%',height:'100%'}}/>
                   <Box
                     sx={[
                       {
@@ -455,8 +507,18 @@ class Content extends Component {
                   overflow={"hidden"}
                   height={"450px"}
                   position={'relative'}
+                  sx={{
+                    width:{
+                      NoteL:'350px',
+                      Planshet:'180px'
+                    },
+                    height:{
+                      NoteL:'',
+                      Planshet:'300px'
+                    }
+                  }}
                 >
-                  <img src={Fort} alt="" />
+                  <img src={Fort} alt="" style={{width:'100%',height:'100%'}}/>
                   <Box
                     sx={[
                       {
@@ -520,8 +582,18 @@ class Content extends Component {
                   overflow={"hidden"}
                   height={"450px"}
                   position={'relative'}
+                  sx={{
+                    width:{
+                      NoteL:'350px',
+                      Planshet:'180px'
+                    },
+                    height:{
+                      NoteL:'',
+                      Planshet:'300px'
+                    }
+                  }}
                 >
-                  <img src={Siyu} alt="" />
+                  <img src={Siyu} alt="" style={{width:'100%',height:'100%'}}/>
                   <Box
                     sx={[
                       {
@@ -585,8 +657,18 @@ class Content extends Component {
                   overflow={"hidden"}
                   height={"450px"}
                   position={'relative'}
+                  sx={{
+                    width:{
+                      NoteL:'350px',
+                      Planshet:'180px'
+                    },
+                    height:{
+                      NoteL:'',
+                      Planshet:'300px'
+                    }
+                  }}
                 >
-                  <img src={Xarli} alt="" />
+                  <img src={Xarli} alt="" style={{width:'100%',height:"100%"}}/>
                   <Box
                     sx={[
                       {
@@ -627,7 +709,7 @@ class Content extends Component {
                     color: "#FFF",
                   }}
                 >
-                  Звёздные войны: Скайуокер. Восход
+                  Звёздные войны
                 </Typography>
                 <Typography
                   variant="p"
@@ -640,7 +722,7 @@ class Content extends Component {
                     color: "#F2F60F",
                   }}
                 >
-                  Фантастика, фэнтези, боевик, приключения
+                  Фантастика, фэнтези, 
                 </Typography>
               </Box>
               <Box>
@@ -650,8 +732,18 @@ class Content extends Component {
                   overflow={"hidden"}
                   height={"450px"}
                   position={'relative'}
+                  sx={{
+                    width:{
+                      NoteL:'350px',
+                      Planshet:'180px'
+                    },
+                    height:{
+                      NoteL:'',
+                      Planshet:'300px'
+                    }
+                  }}
                 >
-                  <img src={Police} alt="" />
+                  <img src={Police} alt="" style={{width:'100%',height:'100%'}}/>
                   <Box
                     sx={[
                       {

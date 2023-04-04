@@ -64,11 +64,16 @@ class Custom extends Component {
           <Box
             flexDirection={"column"}
           >
-            <Box position={"relative"}>
+            <Box position={"relative"} sx={{
+              width:{
+                NoteL:'350px',
+                Planshet:'200px'
+              }
+            }}>
               <Box position={"absolute"} top="45%" left={"45%"}>
                 <img src={play} alt="" />
               </Box>
-              <img src={dominik} alt="" />
+              <img src={dominik} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
             <Typography
               variant="p"
@@ -87,11 +92,17 @@ class Custom extends Component {
           <Box
             flexDirection={"column"}
           >
-            <Box position={"relative"}>
+            <Box position={"relative"}
+            sx={{
+              width:{
+                NoteL:'350px',
+                Planshet:'200px'
+              }
+            }}>
               <Box position={"absolute"} top="45%" left={"45%"}>
                 <img src={play} alt="" />
               </Box>
-              <img src={vodova} alt="" />
+              <img src={vodova} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
             <Typography
               variant="p"
@@ -110,7 +121,13 @@ class Custom extends Component {
           <Box
             flexDirection={"column"}
           >
-            <Box position={"relative"}>
+            <Box position={"relative"}
+            sx={{
+              width:{
+                NoteL:'350px',
+                Planshet:'200px'
+              }
+            }}>
               <Box position={"absolute"} top="45%" left={"45%"}>
                 <img src={play} alt="" />
               </Box>

@@ -2,7 +2,6 @@ import { Box, Typography, Button } from "@mui/material";
 import React, { Component } from "react";
 import Kino from "../images/Логотип (2).png";
 import Icon from "../images/icon.png";
-import Lupa from "../images/Lupa.png";
 import { Link } from "react-router-dom";
 
 class Nav extends Component {
@@ -22,10 +21,11 @@ class Nav extends Component {
         zIndex={"100"}
         bgcolor={"#1E2538"}
         display={"flex"}
+        position={'relative'}
         justifyContent="flex-start"
-        gap={"20px"}
+        gap={"10px"}
         sx={{ opacity: "" , gap:{
-          Planshet:"10px"
+          Planshet:"1px",
         }}}
       >
         <Box ml={"5%"} mr={"5%"} width={"90%"}>
@@ -42,10 +42,15 @@ class Nav extends Component {
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
-          gap={"15px"}
+          gap={"10px"}
+          // border='1px solid red'
           sx={{marginRight:{
             NoteL:'250px',
-            Planshet:"20px",
+            Planshet:"10px",
+            marginTop:{
+              Planshet:'100px'
+            },
+           
           }}}
         >
           <Link to={"/afisha"}>
@@ -61,6 +66,10 @@ class Nav extends Component {
                 lineHeight: "21px",
                 fontWeight: "700",
                 cursor: "pointer",
+                Margintop:{
+                  Planshet:'200px'
+                }
+                
               }}
             >
               Афиша
@@ -172,17 +181,17 @@ class Nav extends Component {
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
-            borderRadius={"10px"}
-            ml={"20px"}
-            border='1px solid red'
+            ml={"10px"}
+            sx={{marginRight:{
+              Planshet:'10px'
+            }}}
           >
             <Button
               onClick={this.SearchBTN}
               variant="contained"
-              sx={{ bgcolor: "#fff", color: "blue",padding:{Planshet:'',NoteL: "12px 20px"} }}
+              sx={{ bgcolor: "#fff", color: "blue",padding:{Planshet:'11px 16px',NoteL: "15px 20px"} }}
             >
-              {" "}
-              <img src={Lupa} alt="" style={{  }} />
+              <i class='bx bx-search-alt-2'></i>
             </Button>
           </Box>
         </Box>
@@ -197,8 +206,8 @@ class Nav extends Component {
               sx={{
                 backgroundColor: "rgba(54, 87, 203, 1)",
                 color: "#fff",
-                padding: "10px 20px",
                 borderRadius: "10px,",
+                padding:{Planshet:'7px 5px',NoteL: "10px 20px"}
               }}
             >
               Войти

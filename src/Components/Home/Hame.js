@@ -3,8 +3,8 @@ import { Box, Typography } from "@mui/material";
 import strelka from "../images/strellka.png";
 import torret from "../images/torret.jpg";
 import play from "../images/Play.png";
-import icons from '../images/icon.png'
-import Like from '../images/like.png'
+import icons from "../images/icon.png";
+import Like from "../images/like.png";
 
 class Hame extends Component {
   render() {
@@ -27,9 +27,13 @@ class Hame extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "900",
-              fontSize: "65px",
+              fontSize: {
+                NoteL:'65px',
+                Planshet:'40px'
+              },
               lineHeight: "80px",
               color: "#fff",
+              
             }}
           >
             Новые трейлеры
@@ -40,11 +44,17 @@ class Hame extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "700",
-              fontSize: "22px",
+              fontSize: {
+                NoteL:'25px',
+                Planshet:'18px'
+              },
               lineHeight: "27px",
               color: "#fff",
               mt: "12px",
-              ml: "700px",
+              ml: {
+                NoteL:"700px",
+                Planshet:'230px'
+              },
             }}
           >
             Все трейлеры
@@ -59,7 +69,12 @@ class Hame extends Component {
             <img src={strelka} alt="" />
           </Box>
         </Box>
-        <Box mt={"30px"} position={"relative"}>
+        <Box mt={"30px"} position={"relative"}
+        sx={{width:{
+          Planshet:'700px',
+          NoteL:'1400px'
+        }}}
+        >
           <Box
             display={"flex"}
             justifyContent={"center"}
@@ -68,34 +83,52 @@ class Hame extends Component {
             top={"47%"}
             left={"47%"}
             zIndex={"2"}
+            sx={{
+              width:{
+                Planshet:'50px'
+              }
+            }}
           >
-            <img src={play} alt="" />
+            <img src={play} alt="" style={{width:'100%',height:'100%'}}/>
           </Box>
-          <img src={torret} alt="" />
+          <img src={torret} alt="" style={{width:'100%',height:'100%'}}/>
         </Box>
         <Box
           display={"flex"}
           justifyContent={"space-between"}
           alignItems="center"
-          gap='900px'
-          mt={'20px'}
+          sx={{
+            gap:{
+              NoteL:'900px',
+              Planshet:'280px'
+            }
+          }}
+          mt={"20px"}
         >
-          <Box display={'flex'} justifyContent='space-between' alignItems={'center'} gap='10px'>
+          <Box
+            display={"flex"}
+            justifyContent="space-between"
+            alignItems={"center"}
+            gap="10px"
+          >
             <Typography
               variant="h3"
               sx={{
                 fontFamily: "-moz-initial",
                 fontStyle: "normal",
                 fontWeight: "900",
-                fontSize: "45px",
+                fontSize: {
+                  Planshet:'35px',
+                  NoteL:'45px'
+                },
                 lineHeight: "80px",
                 color: "#fff",
               }}
             >
               Форсаж 9
             </Typography>
-            <Box mt={'10px'}>
-                <img src={icons} alt="" />
+            <Box mt={"10px"}>
+              <img src={icons} alt="" />
             </Box>
           </Box>
           <Box>
