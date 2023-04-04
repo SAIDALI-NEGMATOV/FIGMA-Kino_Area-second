@@ -24,10 +24,12 @@ class Nav extends Component {
         display={"flex"}
         justifyContent="flex-start"
         gap={"20px"}
-        sx={{ opacity: "" }}
+        sx={{ opacity: "" , gap:{
+          Planshet:"10px"
+        }}}
       >
         <Box ml={"5%"} mr={"5%"} width={"90%"}>
-          <Box >
+          <Box>
             <Link to={"/"}>
               <img src={Kino} alt="" />
             </Link>
@@ -41,7 +43,10 @@ class Nav extends Component {
           justifyContent={"center"}
           alignItems={"center"}
           gap={"15px"}
-          mr={"250px"}
+          sx={{marginRight:{
+            NoteL:'250px',
+            Planshet:"20px",
+          }}}
         >
           <Link to={"/afisha"}>
             <Typography
@@ -49,7 +54,10 @@ class Nav extends Component {
               sx={{
                 color: "rgba(255, 255, 255, 1)",
                 fontFamily: "monospace",
-                fontSize: "17px",
+                fontSize:{
+                  NoteL:'17px',
+                 Planshet:'13px',
+               },
                 lineHeight: "21px",
                 fontWeight: "700",
                 cursor: "pointer",
@@ -64,7 +72,10 @@ class Nav extends Component {
               sx={{
                 color: "rgba(255, 255, 255, 1)",
                 fontFamily: "monospace",
-                fontSize: "17px",
+                fontSize:{
+                  NoteL:'17px',
+                 Planshet:'13px',
+               },
                 lineHeight: "21px",
                 fontWeight: "700",
               }}
@@ -72,39 +83,50 @@ class Nav extends Component {
               Медиа
             </Typography>
           </Link>
-          <Link to='/Films'>
-          <Typography
-            variant="p"
-            sx={{
-              color: "rgba(255, 255, 255, 1)",
-              fontFamily: "monospace",
-              fontSize: "17px",
-              lineHeight: "21px",
-              fontWeight: "700",
-            }}
-          >
-            Фильмы
-          </Typography>
+          <Link to="/Films">
+            <Typography
+              variant="p"
+              sx={{
+                color: "rgba(255, 255, 255, 1)",
+                fontFamily: "monospace",
+                fontSize:{
+                  NoteL:'17px',
+                 Planshet:'13px',
+               },
+                lineHeight: "21px",
+                fontWeight: "700",
+              }}
+            >
+              Фильмы
+            </Typography>
           </Link>
-          <Typography
-            variant="p"
-            sx={{
-              color: "rgba(255, 255, 255, 1)",
-              fontFamily: "monospace",
-              fontSize: "17px",
-              lineHeight: "21px",
-              fontWeight: "700",
-            }}
-          >
-            Актёры
-          </Typography>
+          <Link to='/Actors'>
+            <Typography
+              variant="p"
+              sx={{
+                color: "rgba(255, 255, 255, 1)",
+                fontFamily: "monospace",
+                fontSize:{
+                  NoteL:'17px',
+                 Planshet:'13px',
+               },
+                lineHeight: "21px",
+                fontWeight: "700",
+              }}
+            >
+              Актёры
+            </Typography>
+          </Link>
           <Link to="/news">
             <Typography
               variant="p"
               sx={{
                 color: "rgba(255, 255, 255, 1)",
                 fontFamily: "monospace",
-                fontSize: "17px",
+                fontSize:{
+                  NoteL:'17px',
+                 Planshet:'13px',
+               },
                 lineHeight: "21px",
                 fontWeight: "700",
               }}
@@ -112,13 +134,16 @@ class Nav extends Component {
               Новости
             </Typography>
           </Link>
-          <Link to='/Podbor'>
+          <Link to="/Podbor">
             <Typography
               variant="p"
               sx={{
                 color: "rgba(255, 255, 255, 1)",
                 fontFamily: "monospace",
-                fontSize: "17px",
+                 fontSize:{
+                   NoteL:'17px',
+                  Planshet:'13px',
+                },
                 lineHeight: "21px",
                 fontWeight: "700",
               }}
@@ -131,7 +156,10 @@ class Nav extends Component {
             sx={{
               color: "rgba(255, 255, 255, 1)",
               fontFamily: "monospace",
-              fontSize: "17px",
+              fontSize:{
+                NoteL:'17px',
+               Planshet:'13px',
+             },
               lineHeight: "21px",
               fontWeight: "700",
             }}
@@ -139,21 +167,22 @@ class Nav extends Component {
             Категории
           </Typography>
         </Box>
-        <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
+        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} >
           <Box
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
             borderRadius={"10px"}
             ml={"20px"}
+            border='1px solid red'
           >
             <Button
               onClick={this.SearchBTN}
               variant="contained"
-              sx={{ bgcolor: "#fff", color: "blue" }}
+              sx={{ bgcolor: "#fff", color: "blue",padding:{Planshet:'',NoteL: "12px 20px"} }}
             >
               {" "}
-              <img src={Lupa} alt="" style={{ padding: "7px 20px" }} />
+              <img src={Lupa} alt="" style={{  }} />
             </Button>
           </Box>
         </Box>

@@ -8,7 +8,7 @@ const theme = createTheme({
       Pluse:1000,
       Notebook: 1024,
       Plu:1325,
-      NoteL: 1400,
+      NoteL: 1440,
     },
   },
 });

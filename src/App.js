@@ -13,6 +13,7 @@ import Parol from "./Parol/Parol";
 import Podbor from "./Podborki/Podbor";
 import theme from "./Components/Style/Style";
 import Films from "./Films/Films";
+import Actors from "./Actors/Actors";
 
 
 
@@ -33,6 +34,7 @@ class App extends Component {
           <Route path='/Parol' element={<Parol/>}/>
           <Route path='/Podbor' element={<Podbor/>}/>
           <Route path='/Films' element={<Films/>}/>
+          <Route path='/Actors' element={<Actors/>}/>
         </Routes>
       </Box>
       </ThemeProvider>

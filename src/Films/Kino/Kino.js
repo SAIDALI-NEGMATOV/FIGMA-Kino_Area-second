@@ -20,6 +20,10 @@ import Otarvi from '../img/Otarvi.jpg'
 import More from '../img/More.jpg'
 import Forse from '../img/Forse.jpg'
 import Sea from '../img/Sea.jpg'
+import Man from '../img/Man.jpg'
+import Not from '../img/Not.jpg'
+import The from '../img/The.jpg'
+import Kitay from '../img/Kitay.jpg'
 
 export default function Kino() {
   return (
@@ -1378,6 +1382,270 @@ export default function Kino() {
                 position={"relative"}
               >
                 <img src={More} alt="" />
+                <Box
+                  sx={[
+                    {
+                      width: "100%",
+                      height: "100%",
+                      bgcolor: "transparent",
+                      position: "absolute",
+                      top: "300px",
+                      zIndex: "10",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    },
+                    { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                  ]}
+                >
+                  <Button
+                    sx={[
+                      {
+                        bgcolor: "#fff",
+                        padding: "10px 20px",
+                        borderRadius: "10px",
+                      },
+                    ]}
+                  >
+                    Карточка фильма
+                  </Button>
+                </Box>
+              </Box>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontStyle: "normal",
+                  fontFamily: "-moz-initial",
+                  fontWeight: "400",
+                  fontSize: "18px",
+                  lineHeight: "22px",
+                  color: "#FFF",
+                }}
+              >
+                Random Shit
+              </Typography>
+              <Typography
+                variant="p"
+                sx={{
+                  fontStyle: "normal",
+                  fontFamily: "-moz-initial",
+                  fontWeight: "400",
+                  fontSize: "15px",
+                  lineHeight: "18px",
+                  color: "#F2F60F",
+                }}
+              >
+                Боевик, комедия, криминал
+              </Typography>
+            </Box>
+          </Box>
+          <Box width={"90%"} mt="5%" display={"flex"} gap={"10px"} mb='50px'>
+            <Box>
+            <Box>
+              <Box
+                borderRadius={"10px"}
+                width="100%"
+                overflow={"hidden"}
+                height={"450px"}
+                position={"relative"}
+              >
+                <img src={Kitay} alt="" />
+                <Box
+                  sx={[
+                    {
+                      width: "100%",
+                      height: "100%",
+                      bgcolor: "transparent",
+                      position: "absolute",
+                      top: "300px",
+                      zIndex: "10",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    },
+                    { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                  ]}
+                >
+                  <Button
+                    sx={[
+                      {
+                        bgcolor: "#fff",
+                        padding: "10px 20px",
+                        borderRadius: "10px",
+                      },
+                    ]}
+                  >
+                    Карточка фильма
+                  </Button>
+                </Box>
+              </Box>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontStyle: "normal",
+                  fontFamily: "-moz-initial",
+                  fontWeight: "400",
+                  fontSize: "18px",
+                  lineHeight: "22px",
+                  color: "#FFF",
+                }}
+              >
+                Солнцестояние
+              </Typography>
+              <Typography
+                variant="p"
+                sx={{
+                  fontStyle: "normal",
+                  fontFamily: "-moz-initial",
+                  fontWeight: "400",
+                  fontSize: "15px",
+                  lineHeight: "18px",
+                  color: "#F2F60F",
+                }}
+              >
+                Боевик, комедия, криминал
+              </Typography>
+            </Box>
+          </Box>
+          <Box>
+              <Box
+                borderRadius={"10px"}
+                width="100%"
+                overflow={"hidden"}
+                height={"450px"}
+                position={"relative"}
+              >
+                <img src={The} alt="" />
+                <Box
+                  sx={[
+                    {
+                      width: "100%",
+                      height: "100%",
+                      bgcolor: "transparent",
+                      position: "absolute",
+                      top: "300px",
+                      zIndex: "10",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    },
+                    { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                  ]}
+                >
+                  <Button
+                    sx={[
+                      {
+                        bgcolor: "#fff",
+                        padding: "10px 20px",
+                        borderRadius: "10px",
+                      },
+                    ]}
+                  >
+                    Карточка фильма
+                  </Button>
+                </Box>
+              </Box>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontStyle: "normal",
+                  fontFamily: "-moz-initial",
+                  fontWeight: "400",
+                  fontSize: "18px",
+                  lineHeight: "22px",
+                  color: "#FFF",
+                }}
+              >
+               История игрушек 4
+              </Typography>
+              <Typography
+                variant="p"
+                sx={{
+                  fontStyle: "normal",
+                  fontFamily: "-moz-initial",
+                  fontWeight: "400",
+                  fontSize: "15px",
+                  lineHeight: "18px",
+                  color: "#F2F60F",
+                }}
+              >
+                Боевик, комедия, криминал
+              </Typography>
+            </Box>
+          <Box>
+              <Box
+                borderRadius={"10px"}
+                width="100%"
+                overflow={"hidden"}
+                height={"450px"}
+                position={"relative"}
+              >
+                <img src={Man} alt="" />
+                <Box
+                  sx={[
+                    {
+                      width: "100%",
+                      height: "100%",
+                      bgcolor: "transparent",
+                      position: "absolute",
+                      top: "300px",
+                      zIndex: "10",
+                      display: "flex",
+                      justifyContent: "center",
+                      alignItems: "center",
+                    },
+                    { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                  ]}
+                >
+                  <Button
+                    sx={[
+                      {
+                        bgcolor: "#fff",
+                        padding: "10px 20px",
+                        borderRadius: "10px",
+                      },
+                    ]}
+                  >
+                    Карточка фильма
+                  </Button>
+                </Box>
+              </Box>
+              <Typography
+                variant="h5"
+                sx={{
+                  fontStyle: "normal",
+                  fontFamily: "-moz-initial",
+                  fontWeight: "400",
+                  fontSize: "18px",
+                  lineHeight: "22px",
+                  color: "#FFF",
+                }}
+              >
+                Phobias
+              </Typography>
+              <Typography
+                variant="p"
+                sx={{
+                  fontStyle: "normal",
+                  fontFamily: "-moz-initial",
+                  fontWeight: "400",
+                  fontSize: "15px",
+                  lineHeight: "18px",
+                  color: "#F2F60F",
+                }}
+              >
+                Боевик, комедия, криминал
+              </Typography>
+            </Box>
+          <Box>
+              <Box
+                borderRadius={"10px"}
+                width="100%"
+                overflow={"hidden"}
+                height={"450px"}
+                position={"relative"}
+              >
+                <img src={Not} alt="" />
                 <Box
                   sx={[
                     {

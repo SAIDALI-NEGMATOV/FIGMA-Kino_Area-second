@@ -1,13 +1,15 @@
 import { Box } from "@mui/material";
 import React from "react";
-import Kino from "./Kino/Kino";
+import ActorsChild from "./Actors/ActorsChild";
+import Bottons from "./Buttons/Bottons";
 import Email from "./E-mail/Email";
 import End from "./End/End";
 
-export default function Films() {
+export default function Actors() {
   return (
     <Box>
-      <Kino />
+      <ActorsChild />
+      <Bottons/>
       <Email/>
       <End/>
     </Box>
