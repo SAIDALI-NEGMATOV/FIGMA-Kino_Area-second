@@ -25,7 +25,10 @@ class Personaj extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "900",
-              fontSize: "65px",
+              fontSize: {
+                Planshet:'30px',
+                NoteL:'65px'
+              },
               lineHeight: "80px",
               color: "#fff",
             }}
@@ -38,11 +41,17 @@ class Personaj extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "700",
-              fontSize: "22px",
+              fontSize: {
+                NoteL:"22px",
+                Planshet:'16px'
+              },
               lineHeight: "27px",
               color: "#fff",
               mt: "12px",
-              ml: "500px",
+              ml: {
+                NoteL:'500px',
+                Planshet:'180px'
+              },
             }}
           >
             За год
@@ -53,7 +62,10 @@ class Personaj extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "700",
-              fontSize: "22px",
+              fontSize: {
+                NoteL:"22px",
+                Planshet:'16px'
+              },
               lineHeight: "27px",
               color: "#fff",
               mt: "12px",
@@ -68,7 +80,10 @@ class Personaj extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "700",
-              fontSize: "22px",
+              fontSize: {
+                NoteL:"22px",
+                Planshet:'16px'
+              },
               lineHeight: "27px",
               color: "#fff",
               mt: "12px",
@@ -85,7 +100,18 @@ class Personaj extends Component {
           alignItems={"center"}
           gap="20px"
         >
-          <Box position={"relative"}>
+          <Box position={"relative"}sx={{
+           width:{
+            Planshet:'230px',
+            NoteL:'450px'
+          },
+          height:{
+            Planshet:'230px',
+            NoteL:'400px'
+          },
+          
+          
+          }}>
             <Typography
               variant="p"
               sx={{
@@ -107,10 +133,16 @@ class Personaj extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "35px",
+                fontSize: {
+                  NoteL:"35px",
+                  Planshet:'20px'
+                },
                 lineHeight: "18px",
                 color: "#FFF",
-                top: "350px",
+                top: {
+                  NoteL:'330px',
+                  Planshet:'140px'
+                },
               }}
             >
               Квентин Тарантино
@@ -122,10 +154,16 @@ class Personaj extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "25px",
+                fontSize: {
+                  NoteL:"25px",
+                  Planshet:'20px'
+                },
                 lineHeight: "18px",
-                color: "#340",
-                top: "380px",
+                color: "rgba(255, 255, 255, 0.35)",
+                top: {
+                  NoteL:'360px',
+                  Planshet:'160px'
+                },
               }}
             >
               Quentin Tarantino
@@ -138,16 +176,28 @@ class Personaj extends Component {
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
                 fontSize: "15px",
-                top: "400px",
+                top: {
+                  NoteL:'380px',
+                  Planshet:"180px"
+                },
                 lineHeight: "18px",
                 color: "#F2F60F",
               }}
             >
               57 лет
             </Typography>
-            <img src={Mujikt} alt="" />
+            <img src={Mujikt} alt="" style={{width:'100%',height:'100%'}}/>
           </Box>
-          <Box position={"relative"}>
+          <Box position={"relative"} sx={{
+            width:{
+              Planshet:'230px',
+              NoteL:'450px'
+            }, height:{
+              Planshet:'230px',
+              NoteL:'400px'
+            },
+          
+          }}>
             <Typography
               variant="p"
               sx={{
@@ -158,6 +208,7 @@ class Personaj extends Component {
                 fontSize: "15px",
                 lineHeight: "18px",
                 color: "#F2F60F",
+                
               }}
             >
               2-е место
@@ -169,10 +220,16 @@ class Personaj extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "35px",
+                fontSize: {
+                  NoteL:"35px",
+                  Planshet:'20px'
+                },
                 lineHeight: "18px",
                 color: "#FFF",
-                top: "350px",
+                top: {
+                  NoteL:'330px',
+                  Planshet:'140px'
+                },
               }}
             >
               Джейсон Стейтем
@@ -184,10 +241,16 @@ class Personaj extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "25px",
+                fontSize: {
+                  NoteL:"25px",
+                  Planshet:'20px'
+                },
                 lineHeight: "18px",
-                color: "#340",
-                top: "380px",
+                color: "rgba(255, 255, 255, 0.35)",
+                top: {
+                  NoteL:'360px',
+                  Planshet:'160px'
+                },
               }}
             >
               Jason Statham
@@ -200,14 +263,17 @@ class Personaj extends Component {
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
                 fontSize: "15px",
-                top: "400px",
+                top: {
+                  NoteL:'380px',
+                  Planshet:"180px"
+                },
                 lineHeight: "18px",
                 color: "#F2F60F",
               }}
             >
               52 года
             </Typography>
-            <img src={Mujik} alt="" />
+            <img src={Mujik} alt="" style={{width:"100%",height:'100%'}}/>
           </Box>
           <Box
             display={"flex"}
@@ -215,15 +281,29 @@ class Personaj extends Component {
             justifyContent="flex-start"
             flexDirection="column"
             bgcolor={"rgba(27, 33, 51, 1)"}
-            width={"440px"}
-            height="440px"
+            // border={'1px solid red'}
+            sx={{
+              width:{
+                NoteL:'400px',
+                Planshet:"250px"
+              },height:{
+                NoteL:"400px",
+                Planshet:'230px'
+              }
+            }}
           >
-            <Box display={"flex"} justifyContent="space-between">
+            <Box display={"flex"} justifyContent="space-between" >
               <Box
                 display={"flex"}
                 justifyContent="center"
-                gap={"10px"}
+                sx={{
+                  gap:{
+                    NoteL:"10px",
+                    Planshet:'0px'
+                  }
+                }}
                 flexDirection={"column"}
+                
               >
                 <Typography
                   variant="p"
@@ -231,7 +311,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "25px",
+                    fontSize: {
+                      NoteL:'20px',
+                      Planshet:'15px'
+                    },
                     lineHeight: "18px",
                     color: "#fff",
                     top: "380px",
@@ -245,7 +328,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "20px",
+                    fontSize: {
+                      NoteL:"20px",
+                      Planshet:'11px'
+                    },
                     lineHeight: "18px",
                     color: "#333",
                     top: "380px",
@@ -259,7 +345,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'11px'
+                    },
                     top: "400px",
                     lineHeight: "18px",
                     color: "#F2F60F",
@@ -275,7 +364,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'11px'
+                    },
                     top: "400px",
                     lineHeight: "18px",
                     color: "#F2F60F",
@@ -285,11 +377,21 @@ class Personaj extends Component {
                 </Typography>
               </Box>
             </Box>
-            <Box display={"flex"} justifyContent="space-between" mt='40px'>
+            <Box display={"flex"} justifyContent="space-between" sx={{
+              marginTop:{
+                Planshet:'10px',
+                NoteL:'30px'
+              }
+            }}>
               <Box
                 display={"flex"}
                 justifyContent="center"
-                gap={"10px"}
+                sx={{
+                  gap:{
+                    NoteL:"10px",
+                    Planshet:'0px'
+                  }
+                }}
                 flexDirection={"column"}
               >
                 <Typography
@@ -298,7 +400,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "25px",
+                    fontSize: {
+                      NoteL:'20px',
+                      Planshet:'15px'
+                    },
                     lineHeight: "18px",
                     color: "#fff",
                     top: "380px",
@@ -312,7 +417,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "20px",
+                    fontSize: {
+                      NoteL:"20px",
+                      Planshet:'11px'
+                    },
                     lineHeight: "18px",
                     color: "#333",
                     top: "380px",
@@ -326,7 +434,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'11px'
+                    },
                     top: "400px",
                     lineHeight: "18px",
                     color: "#F2F60F",
@@ -342,7 +453,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'11px'
+                    },
                     top: "400px",
                     lineHeight: "18px",
                     color: "#F2F60F",
@@ -352,11 +466,25 @@ class Personaj extends Component {
                 </Typography>
               </Box>
             </Box>
-            <Box display={"flex"} justifyContent="space-between" mt='40px'>
+            <Box display={"flex"} justifyContent="space-between" sx={{
+              marginTop:{
+                Planshet:'10px',
+                NoteL:'30px'
+              },
+              display:{
+                Planshet:'none',
+                NoteL:'flex'
+              }
+            }}>
               <Box
                 display={"flex"}
                 justifyContent="center"
-                gap={"10px"}
+                sx={{
+                  gap:{
+                    NoteL:"10px",
+                    Planshet:'0px'
+                  }
+                }}
                 flexDirection={"column"}
               >
                 <Typography
@@ -365,7 +493,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "25px",
+                    fontSize: {
+                      NoteL:'20px',
+                      Planshet:'15px'
+                    },
                     lineHeight: "18px",
                     color: "#fff",
                     top: "380px",
@@ -379,7 +510,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "20px",
+                    fontSize: {
+                      NoteL:"20px",
+                      Planshet:'11px'
+                    },
                     lineHeight: "18px",
                     color: "#333",
                     top: "380px",
@@ -393,7 +527,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'11px'
+                    },
                     top: "400px",
                     lineHeight: "18px",
                     color: "#F2F60F",
@@ -409,7 +546,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'11px'
+                    },
                     top: "400px",
                     lineHeight: "18px",
                     color: "#F2F60F",
@@ -419,11 +559,21 @@ class Personaj extends Component {
                 </Typography>
               </Box>
             </Box>
-            <Box display={"flex"} justifyContent="space-between" mt='30px'>
+            <Box display={"flex"} justifyContent="space-between" sx={{
+              marginTop:{
+                Planshet:'10px',
+                NoteL:'30px'
+              }
+            }}>
               <Box
                 display={"flex"}
                 justifyContent="center"
-                gap={"10px"}
+                sx={{
+                  gap:{
+                    NoteL:"10px",
+                    Planshet:'0px'
+                  }
+                }}
                 flexDirection={"column"}
               >
                 <Typography
@@ -432,7 +582,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "25px",
+                    fontSize: {
+                      NoteL:'20px',
+                      Planshet:'15px'
+                    },
                     lineHeight: "18px",
                     color: "#fff",
                     top: "380px",
@@ -446,7 +599,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "20px",
+                    fontSize: {
+                      NoteL:"20px",
+                      Planshet:'11px'
+                    },
                     lineHeight: "18px",
                     color: "#333",
                     top: "380px",
@@ -460,7 +616,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'11px'
+                    },
                     top: "400px",
                     lineHeight: "18px",
                     color: "#F2F60F",
@@ -476,7 +635,10 @@ class Personaj extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'11px'
+                    },
                     top: "400px",
                     lineHeight: "18px",
                     color: "#F2F60F",

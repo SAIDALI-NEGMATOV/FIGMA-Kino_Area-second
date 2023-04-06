@@ -41,11 +41,24 @@ class Custom extends Component {
           <Box
             flexDirection={"column"}
           >
-            <Box position={"relative"}>
-              <Box position={"absolute"} top="45%" left={"45%"}>
-                <img src={play} alt="" />
+            <Box position={"relative"} sx={{
+              width:{
+                NoteL:'350px',
+                Planshet:'180px',
+                Phone:"100px"
+              }
+            }}>
+              <Box position={"absolute"} top="45%" left={"45%"} sx={{
+                width:{
+                  Phone:"15px"
+                }
+              }}>
+                <img src={play} alt="" style={{
+                  width:"100%",
+                  height:"100%"
+                }}/>
               </Box>
-              <img src={mulan} alt="" />
+              <img src={mulan} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
             <Typography
               variant="p"
@@ -53,7 +66,11 @@ class Custom extends Component {
                 fontFamily: "-moz-initial",
                 fontStyle: "normal",
                 fontWeight: "700",
-                fontSize: "16px",
+                fontSize: {
+                  NoteL:"15px",
+                  Planshet:"15px",
+                  Phone:"13px"
+                },
                 lineHeight: "27px",
                 color: "#fff",
               }}
@@ -67,11 +84,16 @@ class Custom extends Component {
             <Box position={"relative"} sx={{
               width:{
                 NoteL:'350px',
-                Planshet:'200px'
+                Planshet:'180px'
               }
             }}>
-              <Box position={"absolute"} top="45%" left={"45%"}>
-                <img src={play} alt="" />
+              <Box position={"absolute"} top="45%" left={"45%"}sx={{
+                 width:{
+                  NoteL:"30px",
+                  Phone:"15px"
+                }
+              }}>
+                <img src={play} alt="" style={{width:'100%',height:'100%'}}/>
               </Box>
               <img src={dominik} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
@@ -81,7 +103,11 @@ class Custom extends Component {
                 fontFamily: "-moz-initial",
                 fontStyle: "normal",
                 fontWeight: "700",
-                fontSize: "16px",
+                fontSize: {
+                  NoteL:"15px",
+                  Planshet:"15px",
+                  Phone:"13px"
+                },
                 lineHeight: "27px",
                 color: "#fff",
               }}
@@ -96,11 +122,18 @@ class Custom extends Component {
             sx={{
               width:{
                 NoteL:'350px',
-                Planshet:'200px'
+                Planshet:'180px'
               }
             }}>
-              <Box position={"absolute"} top="45%" left={"45%"}>
-                <img src={play} alt="" />
+              <Box position={"absolute"} top="45%" left={"45%"} sx={{
+                 width:{
+                  NoteL:"30px",
+                  Phone:"15px"
+                }
+              }}>
+                <img src={play} alt="" style={{
+                  width:'100%',height:"100%"
+                }}/>
               </Box>
               <img src={vodova} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
@@ -110,7 +143,11 @@ class Custom extends Component {
                 fontFamily: "-moz-initial",
                 fontStyle: "normal",
                 fontWeight: "700",
-                fontSize: "16px",
+                fontSize: {
+                  NoteL:"15px",
+                  Planshet:"15px",
+                  Phone:"13px"
+                },
                 lineHeight: "27px",
                 color: "#fff",
               }}
@@ -125,13 +162,20 @@ class Custom extends Component {
             sx={{
               width:{
                 NoteL:'350px',
-                Planshet:'200px'
+                Planshet:'180px'
               }
             }}>
-              <Box position={"absolute"} top="45%" left={"45%"}>
-                <img src={play} alt="" />
+              <Box position={"absolute"} top="45%" left={"45%"} sx={{
+                 width:{
+                  NoteL:"30px",
+                  Phone:"15px"
+                }
+              }}>
+                <img src={play} alt="" style={{
+                 width:"100%",height:"100%"
+                }}/>
               </Box>
-              <img src={pistol} alt="" />
+              <img src={pistol} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
             <Typography
               variant="p"
@@ -139,7 +183,11 @@ class Custom extends Component {
                 fontFamily: "-moz-initial",
                 fontStyle: "normal",
                 fontWeight: "700",
-                fontSize: "16px",
+                fontSize: {
+                  NoteL:"15px",
+                  Planshet:"15px",
+                  Phone:"13px"
+                },
                 lineHeight: "27px",
                 color: "#fff",
               }}

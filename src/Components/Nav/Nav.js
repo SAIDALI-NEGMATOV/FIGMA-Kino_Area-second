@@ -17,41 +17,103 @@ class Nav extends Component {
   render() {
     return (
       <Box
-        padding={"5px"}
+        // padding={"5px"}
         zIndex={"100"}
         bgcolor={"#1E2538"}
         display={"flex"}
-        position={'relative'}
-        justifyContent="flex-start"
+        // position={'relative'}
+        justifyContent="space-between"
         gap={"10px"}
-        sx={{ opacity: "" , gap:{
-          Planshet:"1px",
-        }}}
+        sx={{
+          opacity: "",
+          gap: {
+            Planshet: "1px",
+          },
+          height: {
+            NoteL: "70px",
+            Planshet: "140px",
+            Phone: "80px",
+          },
+          justifyContent: {},
+        }}
       >
-        <Box ml={"5%"} mr={"5%"} width={"90%"}>
-          <Box>
+        <Box
+          ml={"5%"}
+          mr={"5%"}
+          mt={"10px"}
+          sx={{
+            position: {
+              NoteL: "relative",
+              Planshet: "absolute",
+              Phone:"absolute"
+            },
+            left: {
+              NoteL: "10px",
+              Planshet: "270px",
+              Phone:'140px'
+              
+            },
+            top: {
+              NoteL: "0px",
+              Planshet: "13px",
+              Phone:"1px"
+            },
+          }}
+        >
+          <Box sx={{
+            width:{
+              NoteL:"120px",
+              Phone:"80px",
+            }
+          }}>
             <Link to={"/"}>
-              <img src={Kino} alt="" />
+              <img
+                src={Kino}
+                alt=""
+                style={{ width: "100%", height: "100%" }}
+              />
             </Link>
           </Box>
-          <Box>
-            <img src={Icon} alt="" />
+          <Box sx={{
+            width:{
+              NoteL:"120px",
+              Phone:"80px"
+            }
+          }}>
+            <img src={Icon} alt="" style={{ width: "100%", height: "100%" }}/>
           </Box>
         </Box>
         <Box
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
-          gap={"10px"}
           // border='1px solid red'
-          sx={{marginRight:{
-            NoteL:'250px',
-            Planshet:"10px",
-            marginTop:{
-              Planshet:'100px'
+          sx={{
+            marginRight: {
+              NoteL: "200px",
+              Planshet: "10px",
             },
-           
-          }}}
+            position: {
+              Planshet: "absolute",
+              Phone:"absolute"
+            },
+            top: {
+              Planshet: "100px",
+              NoteL: "23px",
+              Phone:"50px"
+            },
+            left: {
+              NoteL: "400px",
+              Planshet: "180px",
+              Phone:"30px"
+            },
+            gap: {
+              NoteL: "40px",
+              Planshet: "10px",
+              Phone: "5px",
+            },
+            zIndex: "2",
+          }}
         >
           <Link to={"/afisha"}>
             <Typography
@@ -59,17 +121,16 @@ class Nav extends Component {
               sx={{
                 color: "rgba(255, 255, 255, 1)",
                 fontFamily: "monospace",
-                fontSize:{
-                  NoteL:'17px',
-                 Planshet:'13px',
-               },
+                fontSize: {
+                  NoteL: "17px",
+                  Planshet: "13px",
+                },
                 lineHeight: "21px",
                 fontWeight: "700",
                 cursor: "pointer",
-                Margintop:{
-                  Planshet:'200px'
-                }
-                
+                Margintop: {
+                  Planshet: "200px",
+                },
               }}
             >
               Афиша
@@ -81,10 +142,10 @@ class Nav extends Component {
               sx={{
                 color: "rgba(255, 255, 255, 1)",
                 fontFamily: "monospace",
-                fontSize:{
-                  NoteL:'17px',
-                 Planshet:'13px',
-               },
+                fontSize: {
+                  NoteL: "17px",
+                  Planshet: "13px",
+                },
                 lineHeight: "21px",
                 fontWeight: "700",
               }}
@@ -98,10 +159,10 @@ class Nav extends Component {
               sx={{
                 color: "rgba(255, 255, 255, 1)",
                 fontFamily: "monospace",
-                fontSize:{
-                  NoteL:'17px',
-                 Planshet:'13px',
-               },
+                fontSize: {
+                  NoteL: "17px",
+                  Planshet: "13px",
+                },
                 lineHeight: "21px",
                 fontWeight: "700",
               }}
@@ -109,16 +170,16 @@ class Nav extends Component {
               Фильмы
             </Typography>
           </Link>
-          <Link to='/Actors'>
+          <Link to="/Actors">
             <Typography
               variant="p"
               sx={{
                 color: "rgba(255, 255, 255, 1)",
                 fontFamily: "monospace",
-                fontSize:{
-                  NoteL:'17px',
-                 Planshet:'13px',
-               },
+                fontSize: {
+                  NoteL: "17px",
+                  Planshet: "13px",
+                },
                 lineHeight: "21px",
                 fontWeight: "700",
               }}
@@ -132,10 +193,10 @@ class Nav extends Component {
               sx={{
                 color: "rgba(255, 255, 255, 1)",
                 fontFamily: "monospace",
-                fontSize:{
-                  NoteL:'17px',
-                 Planshet:'13px',
-               },
+                fontSize: {
+                  NoteL: "17px",
+                  Planshet: "13px",
+                },
                 lineHeight: "21px",
                 fontWeight: "700",
               }}
@@ -149,9 +210,9 @@ class Nav extends Component {
               sx={{
                 color: "rgba(255, 255, 255, 1)",
                 fontFamily: "monospace",
-                 fontSize:{
-                   NoteL:'17px',
-                  Planshet:'13px',
+                fontSize: {
+                  NoteL: "17px",
+                  Planshet: "13px",
                 },
                 lineHeight: "21px",
                 fontWeight: "700",
@@ -165,10 +226,10 @@ class Nav extends Component {
             sx={{
               color: "rgba(255, 255, 255, 1)",
               fontFamily: "monospace",
-              fontSize:{
-                NoteL:'17px',
-               Planshet:'13px',
-             },
+              fontSize: {
+                NoteL: "17px",
+                Planshet: "13px",
+              },
               lineHeight: "21px",
               fontWeight: "700",
             }}
@@ -176,22 +237,44 @@ class Nav extends Component {
             Категории
           </Typography>
         </Box>
-        <Box display={"flex"} justifyContent={"center"} alignItems={"center"} >
+        <Box display={"flex"} justifyContent={"center"} alignItems={"center"}>
           <Box
             display={"flex"}
             justifyContent={"center"}
             alignItems={"center"}
             ml={"10px"}
-            sx={{marginRight:{
-              Planshet:'10px'
-            }}}
+            sx={{
+              marginRight: {
+                Planshet: "10px",
+              },
+              position: {
+                NoteL: "absolute",
+                Planshet: "absolute",
+                Phone:"absolute"
+              },
+              left: {
+                NoteL: "1250px",
+                Planshet: "10px",
+                Phone:"10px"
+                
+              },
+              top: {
+                NoteL: "13px",
+                Planshet: "30px",
+                Phone:"20px"
+              },
+            }}
           >
             <Button
               onClick={this.SearchBTN}
               variant="contained"
-              sx={{ bgcolor: "#fff", color: "blue",padding:{Planshet:'11px 16px',NoteL: "15px 20px"} }}
+              sx={{
+                bgcolor: "#fff",
+                color: "blue",
+                padding: { Planshet: "11px 16px", NoteL: "15px 20px",Phone:"120px , 16px"},
+              }}
             >
-              <i class='bx bx-search-alt-2'></i>
+              <i class="bx bx-search-alt-2"></i>
             </Button>
           </Box>
         </Box>
@@ -200,6 +283,23 @@ class Nav extends Component {
           justifyContent={"center"}
           alignItems={"center"}
           mr={"50px"}
+          sx={{
+            position: {
+              NoteL: "absolute",
+              Planshet: "absolute",
+              Phone:"absolute"
+            },
+            left: {
+              NoteL: "1350px",
+              Planshet: "640px",
+              Phone:"350px"
+            },
+            top: {
+              NoteL: "13px",
+              Planshet: "30px",
+              Phone:"12px"
+            },
+          }}
         >
           <Link to="/Voyti">
             <Button
@@ -207,7 +307,7 @@ class Nav extends Component {
                 backgroundColor: "rgba(54, 87, 203, 1)",
                 color: "#fff",
                 borderRadius: "10px,",
-                padding:{Planshet:'7px 5px',NoteL: "10px 20px"}
+                padding: { Planshet: "7px 5px", NoteL: "10px 20px" },
               }}
             >
               Войти

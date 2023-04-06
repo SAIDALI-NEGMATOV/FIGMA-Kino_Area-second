@@ -29,7 +29,8 @@ class Hame extends Component {
               fontWeight: "900",
               fontSize: {
                 NoteL:'65px',
-                Planshet:'40px'
+                Planshet:'40px',
+                Phone:"30px"
               },
               lineHeight: "80px",
               color: "#fff",
@@ -46,14 +47,16 @@ class Hame extends Component {
               fontWeight: "700",
               fontSize: {
                 NoteL:'25px',
-                Planshet:'18px'
+                Planshet:'18px',
+                Phone:"12px"
               },
               lineHeight: "27px",
               color: "#fff",
               mt: "12px",
               ml: {
                 NoteL:"700px",
-                Planshet:'230px'
+                Planshet:'230px',
+                Phone:"40px"
               },
             }}
           >
@@ -71,8 +74,9 @@ class Hame extends Component {
         </Box>
         <Box mt={"30px"} position={"relative"}
         sx={{width:{
+          NoteL:'1400px',
           Planshet:'700px',
-          NoteL:'1400px'
+          Phone:"400px"
         }}}
         >
           <Box
@@ -85,7 +89,8 @@ class Hame extends Component {
             zIndex={"2"}
             sx={{
               width:{
-                Planshet:'50px'
+                Planshet:'50px',
+                Phone:"25px"
               }
             }}
           >
@@ -100,7 +105,8 @@ class Hame extends Component {
           sx={{
             gap:{
               NoteL:'900px',
-              Planshet:'280px'
+              Planshet:'280px',
+              Phone:"75px"
             }
           }}
           mt={"20px"}
@@ -119,7 +125,8 @@ class Hame extends Component {
                 fontWeight: "900",
                 fontSize: {
                   Planshet:'35px',
-                  NoteL:'45px'
+                  NoteL:'45px',
+                  Phone:"30px"
                 },
                 lineHeight: "80px",
                 color: "#fff",
@@ -131,8 +138,14 @@ class Hame extends Component {
               <img src={icons} alt="" />
             </Box>
           </Box>
-          <Box>
-            <img src={Like} alt="" />
+          <Box sx={{
+            width:{
+              NoteL:"100px",
+              Planshet:"100px",
+              Phone:"70px"
+            }
+          }}>
+            <img src={Like} alt="" style={{width:"100%",height:"100%"}}/>
           </Box>
         </Box>
       </Box>

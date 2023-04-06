@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 import React, { Component } from "react";
-import strelka from "../images/strellka.png";
+import strelka from "../images/Слайдер.png";
 import Escape2 from "../images/escape2.jpg";
 import adios from "../images/adios2.jpg";
 import chorni from "../images/chorni.jpg";
@@ -28,15 +28,30 @@ class Loding extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "900",
-              fontSize: "65px",
+              fontSize: {
+                NoteL: "65px",
+                Planshet: "40px",
+              },
               lineHeight: "80px",
               color: "#fff",
             }}
           >
             Ожидаемые новинки
           </Typography>
-          <Box mt="12px" ml={"750px"}>
-            <img src={strelka} alt="" />
+          <Box
+            mt="12px"
+            sx={{
+              ml: {
+                NoteL: "700px",
+                Planshet: "250px",
+              },
+            }}
+          >
+            <img
+              src={strelka}
+              alt=""
+              style={{ width: "100%", height: "100%" }}
+            />
           </Box>
         </Box>
         <Box
@@ -47,8 +62,25 @@ class Loding extends Component {
           mt="50px"
         >
           <Box>
-            <Box borderRadius="15px" overflow={"hidden"}>
-              <img src={Escape2} alt="" />
+            <Box
+              borderRadius="15px"
+              overflow={"hidden"}
+              sx={{
+                width: {
+                  NoteL: "320px",
+                  Planshet: "180px",
+                },
+                height: {
+                  NoteL: "450px",
+                  Planshet: "300px",
+                },
+              }}
+            >
+              <img
+                src={Escape2}
+                alt=""
+                style={{ width: "100%", height: "100%" }}
+              />
             </Box>
             <Typography
               variant="h5"
@@ -78,8 +110,25 @@ class Loding extends Component {
             </Typography>
           </Box>
           <Box>
-            <Box borderRadius="15px" overflow={"hidden"}>
-              <img src={adios} alt="" />
+            <Box
+              borderRadius="15px"
+              overflow={"hidden"}
+              sx={{
+                width: {
+                  NoteL: "320px",
+                  Planshet: "180px",
+                },
+                height: {
+                  NoteL: "450px",
+                  Planshet: "300px",
+                },
+              }}
+            >
+              <img
+                src={adios}
+                alt=""
+                style={{ width: "100%", height: "100%" }}
+              />
             </Box>
             <Typography
               variant="h5"
@@ -109,8 +158,25 @@ class Loding extends Component {
             </Typography>
           </Box>
           <Box>
-            <Box borderRadius="15px" overflow={"hidden"}>
-              <img src={chorni} alt="" />
+            <Box
+              borderRadius="15px"
+              overflow={"hidden"}
+              sx={{
+                width: {
+                  NoteL: "320px",
+                  Planshet: "180px",
+                },
+                height: {
+                  NoteL: "450px",
+                  Planshet: "300px",
+                },
+              }}
+            >
+              <img
+                src={chorni}
+                alt=""
+                style={{ width: "100%", height: "100%" }}
+              />
             </Box>
             <Typography
               variant="h5"
@@ -140,8 +206,21 @@ class Loding extends Component {
             </Typography>
           </Box>
           <Box>
-            <Box borderRadius="15px" overflow={"hidden"}>
-              <img src={pri} alt="" />
+            <Box
+              borderRadius="15px"
+              overflow={"hidden"}
+              sx={{
+                width: {
+                  NoteL: "320px",
+                  Planshet: "180px",
+                },
+                height: {
+                  NoteL: "450px",
+                  Planshet: "300px",
+                },
+              }}
+            >
+              <img src={pri} alt="" style={{ width: "100%", height: "100%" }} />
             </Box>
             <Typography
               variant="h5"

@@ -37,7 +37,10 @@ class Email extends Component {
                 fontFamily: "-moz-initial",
                 fontStyle: "normal",
                 fontWeight: "900",
-                fontSize: "65px",
+                fontSize: {
+                  NoteL:"65px",
+                  Planshet:"35px"
+                },
                 lineHeight: "80px",
                 color: "#fff",
               }}
@@ -52,7 +55,7 @@ class Email extends Component {
                 fontFamily: "-moz-initial",
                 fontStyle: "normal",
                 fontWeight: "900",
-                fontSize: "25px",
+                fontSize: {NoteL:"25px",Planshet:"17px"},
                 lineHeight: "30px",
                 color: "#fff",
               }}

@@ -24,6 +24,12 @@ class Client extends Component {
           gap="40px"
           pt={"30px"}
           mt="30px"
+          sx={{
+            gap:{
+              NoteL:"40px",
+              Planshet:"29px"
+            }
+          }}
         >
           <Typography
             variant="h2"
@@ -31,7 +37,10 @@ class Client extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "900",
-              fontSize: "65px",
+              fontSize: {
+                Planshet:"40px",
+                NoteL:"65px"
+              },
               lineHeight: "80px",
               color: "#fff",
             }}
@@ -43,7 +52,10 @@ class Client extends Component {
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+              fontSize: {
+                NoteL:"18px",
+                Planshet:"12px"
+              },
               lineHeight: "22px",
               color: "#fff",
               mt: "10px",
@@ -57,6 +69,12 @@ class Client extends Component {
             width={"100px"}
             borderTop={"1px solid #fff"}
             mt="10px"
+            sx={{
+              display:{
+                Planshet:'none',
+                NoteL:'block'
+              }
+            }}
           ></Box>
 
           <Typography
@@ -64,11 +82,17 @@ class Client extends Component {
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+              fontSize: {
+                NoteL:"18px",
+                Planshet:"12px"
+              },
               lineHeight: "22px",
               color: "rgba(255, 255, 255, 0.35)",
               mt: "10px",
-              ml: "100px",
+              ml: {
+                NoteL:"100px",
+                Planshet:"0px"
+              },
             }}
           >
             Россия
@@ -78,7 +102,10 @@ class Client extends Component {
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+              fontSize: {
+                NoteL:"18px",
+                Planshet:"12px"
+              },
               lineHeight: "22px",
               color: "#fff",
 
@@ -92,7 +119,10 @@ class Client extends Component {
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+              fontSize: {
+                NoteL:"18px",
+                Planshet:"12px"
+              },
               lineHeight: "22px",
               color: "rgba(255, 255, 255, 0.35)",
               mt: "10px",
@@ -107,6 +137,18 @@ class Client extends Component {
           alignItems={"center"}
           gap="25px"
           mt="30px"
+          sx={{
+            flexWrap:{
+              Planshet:"wrap",
+              NoteL:'nowrap'
+            },justifyContent:{
+              NoteL:"center",
+              Planshet:"flex-start"
+            },paddingLeft:{
+              NoteL:"0px",
+              Planshet:"40px"
+            }
+          }}
         >
           <Box display={"flex"} overflow="hidden" borderRadius={"10px"}>
             <Box>
@@ -131,7 +173,12 @@ class Client extends Component {
               <Typography
                 variant="p"
                 color={"rgba(255, 255, 255, 0.35)"}
-                fontSize="15px"
+                sx={{
+                  fontSize:{
+                    Planshet:"10px",
+                    NoteL:"15px"
+                  }
+                }}
               >
                 $15.1 млн за 4 недели
               </Typography>
@@ -160,7 +207,12 @@ class Client extends Component {
               <Typography
                 variant="p"
                 color={"rgba(255, 255, 255, 0.35)"}
-                fontSize="15px"
+                sx={{
+                  fontSize:{
+                    Planshet:"10px",
+                    NoteL:"15px"
+                  }
+                }}
               >
                 $41.4 млн за 4 недели
               </Typography>
@@ -189,7 +241,12 @@ class Client extends Component {
               <Typography
                 variant="p"
                 color={"rgba(255, 255, 255, 0.35)"}
-                fontSize="15px"
+                sx={{
+                  fontSize:{
+                    Planshet:"10px",
+                    NoteL:"15px"
+                  }
+                }}
               >
                $58.3 млн за 3 недели
               </Typography>
@@ -218,7 +275,12 @@ class Client extends Component {
               <Typography
                 variant="p"
                 color={"rgba(255, 255, 255, 0.35)"}
-                fontSize="15px"
+                sx={{
+                  fontSize:{
+                    Planshet:"10px",
+                    NoteL:"15px"
+                  }
+                }}
               >
                 $15.1 млн за 4 недели
               </Typography>
@@ -247,7 +309,12 @@ class Client extends Component {
               <Typography
                 variant="p"
                 color={"rgba(255, 255, 255, 0.35)"}
-                fontSize="15px"
+                sx={{
+                  fontSize:{
+                    Planshet:"10px",
+                    NoteL:"15px"
+                  }
+                }}
               >
                 $78.7 млн за 11 недель
               </Typography>

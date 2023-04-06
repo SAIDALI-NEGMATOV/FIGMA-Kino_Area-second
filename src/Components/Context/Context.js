@@ -30,20 +30,33 @@ class Context extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "900",
-              fontSize: "65px",
+              fontSize:{
+                Planshet:"20px",
+                NoteL:'65px',
+                Phone:'10px'
+              },
               lineHeight: "80px",
               color: "#fff",
+              
             }}
           >
             Популярные фильмы
           </Typography>
-          <Box width={"100px"} borderTop={"1px solid #fff"} mt="10px"></Box>
+          <Box width={"100px"} borderTop={"1px solid #fff"} mt="10px" sx={{
+            display:{
+              Planshet:'none',
+              NoteL:'block'
+            }
+          }}></Box>
           <Typography
             variant="p"
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+              fontSize: {
+                Planshet:'12px',
+                NoteL:'18px'
+              },
               lineHeight: "22px",
               color: "#fff",
               mt: "10px",
@@ -57,7 +70,10 @@ class Context extends Component {
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+               fontSize: {
+                Planshet:'12px',
+                NoteL:'18px'
+              },
               lineHeight: "22px",
 
               mt: "10px",
@@ -70,7 +86,10 @@ class Context extends Component {
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+               fontSize: {
+                Planshet:'12px',
+                NoteL:'18px'
+              },
               lineHeight: "22px",
 
               mt: "10px",
@@ -83,7 +102,10 @@ class Context extends Component {
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+              fontSize: {
+                Planshet:'12px',
+                NoteL:'18px'
+              },
               lineHeight: "22px",
               mt: "10px",
             }}
@@ -95,7 +117,10 @@ class Context extends Component {
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+               fontSize: {
+                Planshet:'12px',
+                NoteL:'18px'
+              },
               lineHeight: "22px",
 
               mt: "10px",
@@ -108,7 +133,10 @@ class Context extends Component {
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+               fontSize: {
+                Planshet:'12px',
+                NoteL:'18px'
+              },
               lineHeight: "22px",
               mt: "10px",
             }}
@@ -121,7 +149,10 @@ class Context extends Component {
             sx={{
               fontFamily: "-moz-initial",
               fontWeight: "700",
-              fontSize: "18px",
+              fontSize: {
+                Planshet:'12px',
+                NoteL:'18px'
+              },
               lineHeight: "22px",
 
               mt: "10px",
@@ -130,10 +161,24 @@ class Context extends Component {
             2016
           </Typography>
         </Box>
-        <Box display={"flex"} justifyContent="center" alignItems={"center"} gap='15px' mt='50px'>
+        <Box display={"flex"} justifyContent="center" alignItems={"center"} sx={{
+          gap:{
+            NoteL:"15px",
+            Planshet:'8px'
+          }
+        }} mt='50px'>
           <Box>
-            <Box borderRadius="15px" overflow={"hidden"}>
-              <img src={jokker2} alt="" />
+            <Box borderRadius="15px" overflow={"hidden"} sx={{
+                width:{
+                  NoteL:'330px',
+                  Planshet:'180px'
+                },
+                height:{
+                  NoteL:'450px',
+                  Planshet:'300px'
+                }
+            }}>
+              <img src={jokker2} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
             <Typography
               variant="h5"
@@ -161,8 +206,17 @@ class Context extends Component {
             </Typography>
           </Box>
           <Box>
-            <Box borderRadius="15px" overflow={"hidden"}>
-              <img src={istoriya} alt="" />
+            <Box borderRadius="15px" overflow={"hidden"} sx={{
+                width:{
+                  NoteL:'330px',
+                  Planshet:'180px'
+                },
+                height:{
+                  NoteL:'450px',
+                  Planshet:'300px'
+                }
+            }}>
+              <img src={istoriya} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
             <Typography
               variant="h5"
@@ -186,12 +240,21 @@ class Context extends Component {
                 lineHeight: "18px",
                 color: "#F2F60F",
               }}>
-            Мультфильм, фэнтези, комедия, приключения ...
+            Мультфильм, фэнтези
             </Typography>
           </Box>
           <Box>
-            <Box borderRadius="15px" overflow={"hidden"}>
-              <img src={gallivud} alt="" />
+            <Box borderRadius="15px" overflow={"hidden"} sx={{
+                width:{
+                  NoteL:'330px',
+                  Planshet:'180px'
+                },
+                height:{
+                  NoteL:'450px',
+                  Planshet:'300px'
+                }
+            }}>
+              <img src={gallivud} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
             <Typography
               variant="h5"
@@ -204,7 +267,7 @@ class Context extends Component {
                 color: "#FFF",
               }}
             >
-                Однажды в… Голливуде
+                Однажды Голливуде
             </Typography>
             <Typography variant="p"
                sx={{
@@ -219,8 +282,17 @@ class Context extends Component {
             </Typography>
           </Box>
           <Box>
-            <Box borderRadius="15px" overflow={"hidden"}>
-              <img src={sol} alt="" />
+            <Box borderRadius="15px" overflow={"hidden"}sx={{
+                width:{
+                  NoteL:'330px',
+                  Planshet:'180px'
+                },
+                height:{
+                  NoteL:'450px',
+                  Planshet:'300px'
+                }
+            }}>
+              <img src={sol} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
             <Typography
               variant="h5"

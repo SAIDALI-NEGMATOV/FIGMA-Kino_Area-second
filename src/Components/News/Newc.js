@@ -29,7 +29,10 @@ class Newc extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "900",
-              fontSize: "65px",
+              fontSize: {
+                NoteL:'65px',
+                Planshet:'40px'
+              },
               lineHeight: "80px",
               color: "#fff",
             }}
@@ -42,11 +45,17 @@ class Newc extends Component {
               fontFamily: "-moz-initial",
               fontStyle: "normal",
               fontWeight: "700",
-              fontSize: "22px",
+              fontSize: {
+                NoteL:"22px",
+                Planshet:'18px'
+              },
               lineHeight: "27px",
               color: "#fff",
               mt: "12px",
-              ml: "700px",
+              ml: {
+                Planshet:'200px',
+                NoteL:"700px"
+              },
             }}
           >
             Все трейлеры
@@ -66,8 +75,21 @@ class Newc extends Component {
           justifyContent="center"
           gap={"20px"}
           position="relative"
+          sx={{
+            flexDirection:{
+              Planshet:'column',
+              NoteL:"row"
+            },ml:{
+              Planshet:"10px"
+            }
+          }}
         >
-          <Box borderRadius={"20px"} overflow="hidden" position={"relative"}>
+          <Box borderRadius={"20px"} overflow="hidden" position={"relative"} sx={{
+            width:{
+              Planshet:'750px',
+              NoteL:"1200px"
+            }
+          }}>
             <Typography
               variant="p"
               position={"absolute"}
@@ -79,10 +101,27 @@ class Newc extends Component {
             </Typography>
             <Typography
               variant="p"
-              fontSize={"40px"}
-              position={"absolute"}
-              left={"10px"}
-              top={"600px"}
+              // fontSize={"40px"}
+              sx={{
+                position:{
+                  Planshet:"absolute",
+                  NoteL:'absolute'
+                },
+                left:{
+                  Planshet:"10px",
+                  NoteL:"10px"
+                },
+                top:{
+                  Planshet:'300px',
+                  NoteL:"600px"
+                },fontSize:{
+                  Planshet:"30px",
+                  NoteL:'40px'
+                }
+              }}
+              // position={"absolute"}
+              // left={"10px"}
+              // top={"600px"}
               color={"#fff"}
               fontFamily={"fantasy"}
             >
@@ -91,9 +130,23 @@ class Newc extends Component {
             <Typography
               variant="p"
               fontSize={"20px"}
-              position={"absolute"}
-              left={"10px"}
-              top={"660px"}
+              sx={{
+                position:{
+                  Planshet:"absolute",
+                  NoteL:'absolute'
+                },
+                left:{
+                  Planshet:"10px",
+                  NoteL:"10px"
+                },
+                top:{
+                  Planshet:'350px',
+                  NoteL:"650px"
+                },fontSize:{
+                  Planshet:"18px",
+                  NoteL:"20px"
+                }
+              }}
               color={"#fff"}
             >
               Но действия представителей оппозиции в равной степени
@@ -101,13 +154,18 @@ class Newc extends Component {
               стандартов, стремящиеся вытеснить традиционное производство,
               нанотехнологии указаны как претенденты на роль ключевых факторов.
             </Typography>
-            <img src={Bond} alt="" />
+            <img src={Bond} alt="" style={{width:'100%',height:'100%'}}/>
           </Box>
           <Box
             display={"flex"}
             justifyContent="center"
             alignItems={"center"}
-            flexDirection="column"
+            sx={{
+              flexDirection:{
+                NoteL:"column",
+                Planshet:"row"
+              }
+            }}
             gap="10px"
           >
             <Box overflow={"hidden"} borderRadius="10px" position={"relative"}>
@@ -121,19 +179,28 @@ class Newc extends Component {
               </Typography>
               <Typography
                 variant="p"
-                position={"absolute"}
-                top="150px"
+                sx={{
+                  position:{
+                    NoteL:'absolute',
+                    Planshet:'absolute',
+                  },top:{
+                    NoteL:"150px",
+                    Planshet:"100px"
+                  },fontSize:{
+                    NoteL:"15px",
+                    Planshet:"12px"
+                  }
+                }}
                 color={"#fff"}
-                fontSize={"15px"}
                 fontFamily="fantasy"
               >
                 Как изменили Соника с последнего анонса
               </Typography>
-              <img src={Sonnik} alt="" />
+              <img src={Sonnik} alt="" style={{width:"100%",height:'100%'}}/>
             </Box>
             <Box overflow={"hidden"} borderRadius="10px" position={"relative"}>
               <Box position={"absolute"}></Box>
-              <img src={mini} alt="" />
+              <img src={mini} alt="" style={{width:"100%",height:'100%'}}/>
             </Box>
             <Box overflow={"hidden"} borderRadius="10px" position={"relative"}>
               <Typography
@@ -146,15 +213,25 @@ class Newc extends Component {
               </Typography>
               <Typography
                 variant="p"
-                position={"absolute"}
-                top="150px"
+                sx={{
+                  position:{
+                    NoteL:'absolute',
+                    Planshet:'absolute',
+                  },top:{
+                    NoteL:"150px",
+                    Planshet:"100px"
+                  },fontSize:{
+                    NoteL:"15px",
+                    Planshet:"12px"
+                  }
+                }}
                 color={"#fff"}
-                fontSize={"15px"}
+                // fontSize={"15px"}
                 fontFamily="fantasy"
               >
                 Как изменили Соника с последнего анонса
               </Typography>
-              <img src={yomgir} alt="" />
+              <img src={yomgir} alt="" style={{width:"100%",height:'100%'}}/>
             </Box>
             <Box overflow={"hidden"} borderRadius="10px" position={"relative"}>
               <Typography
@@ -167,15 +244,27 @@ class Newc extends Component {
               </Typography>
               <Typography
                 variant="p"
-                position={"absolute"}
-                top="150px"
+                sx={{
+                  position:{
+                    NoteL:'absolute',
+                    Planshet:'absolute',
+                  },top:{
+                    NoteL:"150px",
+                    Planshet:"100px"
+                  },fontSize:{
+                    NoteL:"15px",
+                    Planshet:"12px"
+                  }
+                }}
+                // position={"absolute"}
+                // top="150px"
                 color={"#fff"}
-                fontSize={"15px"}
+                // fontSize={"15px"}
                 fontFamily="fantasy"
               >
                 Как изменили Соника с последнего анонса
               </Typography>
-              <img src={sahro} alt="" />
+              <img src={sahro} alt="" style={{width:"100%",height:'100%'}}/>
             </Box>
           </Box>
         </Box>

@@ -9,6 +9,7 @@ import Fort from "../images/Ford.jpg";
 import Siyu from "../images/3022.jpg";
 import Xarli from "../images/Xarli.jpg";
 import Police from "../images/Police.jpg";
+import istoriya from '../images/istoriya.jpg'
 import { Link } from "react-router-dom";
 
 class Content extends Component {
@@ -53,6 +54,8 @@ class Content extends Component {
                 fontWeight: "900",
                 fontSize: {
                   NoteL: "60px",
+                  Planshet: "40px",
+                  Phone: "40px",
                 },
                 lineHeight: "80px",
                 color: "#FFFFFF",
@@ -80,20 +83,25 @@ class Content extends Component {
                 },
               }}
             ></Box>
-            <Box  display={"flex"}
-            sx={{
-              gap: {
-                Planshet:'20px',
-                NoteL:'40px',
-              }
-            }}
+            <Box
+              display={"flex"}
+              sx={{
+                gap: {
+                  NoteL: "40px",
+                  Planshet: "20px",
+                  Phone: "5px",
+                },
+              }}
             >
               <Typography
                 variant="p"
                 sx={{
                   fontFamily: "-moz-initial",
                   fontWeight: "700",
-                  fontSize: "18px",
+                  fontSize: {
+                    NoteL: "18px",
+                    Phone: "12px",
+                  },
                   lineHeight: "22px",
                   color: "#fff",
                   mt: "10px",
@@ -107,7 +115,10 @@ class Content extends Component {
                 sx={{
                   fontFamily: "-moz-initial",
                   fontWeight: "700",
-                  fontSize: "18px",
+                  fontSize: {
+                    NoteL: "18px",
+                    Phone: "12px",
+                  },
                   lineHeight: "22px",
                   color: "rgba(255, 255, 255, 0.35)",
                   mt: "10px",
@@ -120,7 +131,10 @@ class Content extends Component {
                 sx={{
                   fontFamily: "-moz-initial",
                   fontWeight: "700",
-                  fontSize: "18px",
+                  fontSize: {
+                    NoteL: "18px",
+                    Phone: "12px",
+                  },
                   lineHeight: "22px",
                   color: "rgba(255, 255, 255, 0.35)",
 
@@ -134,7 +148,10 @@ class Content extends Component {
                 sx={{
                   fontFamily: "-moz-initial",
                   fontWeight: "700",
-                  fontSize: "18px",
+                  fontSize: {
+                    NoteL: "18px",
+                    Phone: "12px",
+                  },
                   lineHeight: "22px",
                   mt: "10px",
                   color: "rgba(255, 255, 255, 0.35)",
@@ -147,7 +164,10 @@ class Content extends Component {
                 sx={{
                   fontFamily: "-moz-initial",
                   fontWeight: "700",
-                  fontSize: "18px",
+                  fontSize: {
+                    NoteL: "18px",
+                    Phone: "12px",
+                  },
                   lineHeight: "22px",
                   color: "rgba(255, 255, 255, 0.35)",
 
@@ -161,7 +181,10 @@ class Content extends Component {
                 sx={{
                   fontFamily: "-moz-initial",
                   fontWeight: "700",
-                  fontSize: "18px",
+                  fontSize: {
+                    NoteL: "18px",
+                    Phone: "12px",
+                  },
                   lineHeight: "22px",
                   mt: "10px",
                   color: "rgba(255, 255, 255, 0.35)",
@@ -175,7 +198,10 @@ class Content extends Component {
                 sx={{
                   fontFamily: "-moz-initial",
                   fontWeight: "700",
-                  fontSize: "18px",
+                  fontSize: {
+                    NoteL: "18px",
+                    Phone: "12px",
+                  },
                   lineHeight: "22px",
                   color: "rgba(255, 255, 255, 0.35)",
                   mt: "10px",
@@ -186,31 +212,41 @@ class Content extends Component {
             </Box>
           </Box>
           <Box>
-            <Box width={"90%"} mt={"5%"} display={"flex"} gap={"10px"}>
-              <Box>
+            <Box width={"90%"} mt={"5%"} display={"flex"} gap={"10px"}sx={{
+            marginLeft:{
+              Planshet:"0px",
+              NoteL:"0px",
+              Phone:"20px"
+            }
+          }}>
+              <Box >
                 <Box
                   sx={[
                     {
                       borderRadius: "10px",
-                        width:{
-                          NoteL:'350px',
-                          Planshet:'180px'
-                        },
-                        height:{
-                          NoteL:'450px',
-                          Planshet:'300px'
-                        }
-                      ,
+                      width: {
+                        NoteL: "320px",
+                        Planshet: "180px",
+                      },
+                      height: {
+                        NoteL: "450px",
+                        Planshet: "300px",
+                      },
                       overflow: "hidden",
                       position: "relative",
-                      marginLeft:{
-                        Planshet:'8px',
-                        NateL:'0px'
-                      }
-                    }
+                      marginLeft: {
+                        Planshet: "8px",
+                        NateL: "0px",
+                        
+                      },
+                    },
                   ]}
                 >
-                  <img src={Escape} alt="" style={{width:'100%',height:'100%'}}/>
+                  <img
+                    src={Escape}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
                   <Box
                     sx={[
                       {
@@ -246,7 +282,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "18px",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
                     lineHeight: "22px",
                     color: "#FFF",
                   }}
@@ -267,29 +307,32 @@ class Content extends Component {
                   Триллер
                 </Typography>
               </Box>
-              <Box 
-                  // border={'1px solid red'}
-
+              <Box
+              // border={'1px solid red'}
               >
                 <Box
                   borderRadius={"10px"}
                   // width="100%"
                   overflow={"hidden"}
                   height={"450px"}
-                  position={'relative'}
+                  position={"relative"}
                   // border={'1px solid red'}
                   sx={{
-                    width:{
-                      NoteL:'350px',
-                      Planshet:'180px'
+                    width: {
+                      NoteL: "320px",
+                      Planshet: "180px",
                     },
-                    height:{
-                      NoteL:'',
-                      Planshet:'300px'
-                    }
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "290px",
+                    },
                   }}
                 >
-                  <img src={Jokker} alt="" style={{width:'100%',height:'100%'}}/>
+                  <img
+                    src={Jokker}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
                   <Box
                     sx={[
                       {
@@ -325,7 +368,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "18px",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
                     lineHeight: "22px",
                     color: "#FFF",
                   }}
@@ -338,7 +385,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'15px',
+                      Phone:"10px"
+                    },
                     lineHeight: "18px",
                     color: "#F2F60F",
                   }}
@@ -352,19 +403,23 @@ class Content extends Component {
                   width="100%"
                   overflow={"hidden"}
                   height={"450px"}
-                  position={'relative'}
+                  position={"relative"}
                   sx={{
-                    width:{
-                      NoteL:'300px',
-                      Planshet:'180px'
+                    width: {
+                      NoteL: "330px",
+                      Planshet: "180px",
                     },
-                    height:{
-                          NoteL:'450px',
-                      Planshet:'300px'
-                    }
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "300px",
+                    },
                   }}
                 >
-                  <img src={opoqi} alt="" style={{width:"100%",height:'100%'}}/>
+                  <img
+                    src={opoqi}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
                   <Box
                     sx={[
                       {
@@ -400,12 +455,16 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "18px",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
                     lineHeight: "22px",
                     color: "#FFF",
                   }}
                 >
-                  Звёздные войны: 
+                  Звёздные войны:
                 </Typography>
                 <Typography
                   variant="p"
@@ -413,33 +472,48 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'15px',
+                      Phone:"10px"
+                    },
                     lineHeight: "18px",
                     color: "#F2F60F",
                   }}
                 >
-                  Фантастика, фэнтези, 
+                  Фантастика, фэнтези,
                 </Typography>
               </Box>
-              <Box>
+              <Box sx={{
+                display: {
+                  NoteL: "block",
+                  Planshet: "block",
+                  Phone: "none",
+                },
+              }}>
                 <Box
                   borderRadius={"10px"}
                   width="100%"
                   overflow={"hidden"}
                   height={"450px"}
-                  position={'relative'}
+                  position={"relative"}
                   sx={{
-                    width:{
-                      NoteL:'300px',
-                      Planshet:'180px'
+                    width: {
+                      NoteL: "320px",
+                      Planshet: "180px",
                     },
-                    height:{
-                          NoteL:'450px',
-                      Planshet:'300px'
-                    }
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "290px",
+                    },
+                    
                   }}
                 >
-                  <img src={Xennam} alt="" style={{width:'100%',height:'100%'}}/>
+                  <img
+                    src={Xennam}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
                   <Box
                     sx={[
                       {
@@ -475,7 +549,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "18px",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
                     lineHeight: "22px",
                     color: "#FFF",
                   }}
@@ -488,7 +566,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'15px',
+                      Phone:"10px"
+                    },
                     lineHeight: "18px",
                     color: "#F2F60F",
                   }}
@@ -499,26 +581,43 @@ class Content extends Component {
             </Box>
           </Box>
           <Box>
-            <Box width={"90%"} mt="5%" display={"flex"} gap={"10px"}>
-              <Box>
+            <Box width={"90%"} mt="5%" display={"flex"} gap={"10px"} sx={{
+            marginLeft:{
+              Planshet:"0px",
+              NoteL:"0px",
+              Phone:"20px"
+            }
+          }}>
+            <Box sx={{
+                display: {
+                  NoteL: "none",
+                  Planshet: "none",
+                  Phone: "block",
+                },
+              }}>
                 <Box
                   borderRadius={"10px"}
                   width="100%"
                   overflow={"hidden"}
                   height={"450px"}
-                  position={'relative'}
+                  position={"relative"}
                   sx={{
-                    width:{
-                      NoteL:'350px',
-                      Planshet:'180px'
+                    width: {
+                      NoteL: "320px",
+                      Planshet: "180px",
                     },
-                    height:{
-                      NoteL:'',
-                      Planshet:'300px'
-                    }
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "290px",
+                    },
+                    
                   }}
                 >
-                  <img src={Fort} alt="" style={{width:'100%',height:'100%'}}/>
+                  <img
+                    src={Xennam}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
                   <Box
                     sx={[
                       {
@@ -554,7 +653,98 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "18px",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
+                    lineHeight: "22px",
+                    color: "#FFF",
+                  }}
+                >
+                  Джентльмены
+                </Typography>
+                <Typography
+                  variant="p"
+                  sx={{
+                    fontStyle: "normal",
+                    fontFamily: "-moz-initial",
+                    fontWeight: "400",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'15px',
+                      Phone:"10px"
+                    },
+                    lineHeight: "18px",
+                    color: "#F2F60F",
+                  }}
+                >
+                  Боевик, комедия, криминал
+                </Typography>
+              </Box>
+              <Box>
+                <Box
+                  borderRadius={"10px"}
+                  width="100%"
+                  overflow={"hidden"}
+                  height={"450px"}
+                  position={"relative"}
+                  sx={{
+                    width: {
+                      NoteL: "320px",
+                      Planshet: "180px",
+                    },
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "290px",
+                    },
+                  }}
+                >
+                  <img
+                    src={Fort}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                  <Box
+                    sx={[
+                      {
+                        width: "100%",
+                        height: "100%",
+                        bgcolor: "transparent",
+                        position: "absolute",
+                        top: "300px",
+                        zIndex: "10",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      },
+                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                    ]}
+                  >
+                    <Button
+                      sx={[
+                        {
+                          bgcolor: "#fff",
+                          padding: "10px 20px",
+                          borderRadius: "10px",
+                        },
+                      ]}
+                    >
+                      Карточка фильма
+                    </Button>
+                  </Box>
+                </Box>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontStyle: "normal",
+                    fontFamily: "-moz-initial",
+                    fontWeight: "400",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
                     lineHeight: "22px",
                     color: "#FFF",
                   }}
@@ -567,7 +757,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'15px',
+                      Phone:"10px"
+                    },
                     lineHeight: "18px",
                     color: "#F2F60F",
                   }}
@@ -581,19 +775,23 @@ class Content extends Component {
                   width="100%"
                   overflow={"hidden"}
                   height={"450px"}
-                  position={'relative'}
+                  position={"relative"}
                   sx={{
-                    width:{
-                      NoteL:'350px',
-                      Planshet:'180px'
+                    width: {
+                      NoteL: "320px",
+                      Planshet: "180px",
                     },
-                    height:{
-                      NoteL:'',
-                      Planshet:'300px'
-                    }
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "290px",
+                    },
                   }}
                 >
-                  <img src={Siyu} alt="" style={{width:'100%',height:'100%'}}/>
+                  <img
+                    src={Siyu}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
                   <Box
                     sx={[
                       {
@@ -629,7 +827,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "18px",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
                     lineHeight: "22px",
                     color: "#FFF",
                   }}
@@ -642,7 +844,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'15px',
+                      Phone:"10px"
+                    },
                     lineHeight: "18px",
                     color: "#F2F60F",
                   }}
@@ -650,25 +856,35 @@ class Content extends Component {
                   Триллер, драма, криминал
                 </Typography>
               </Box>
-              <Box>
+              <Box sx={{
+                display: {
+                  NoteL: "block",
+                  Planshet: "block",
+                  Phone: "none",
+                },
+              }}>
                 <Box
                   borderRadius={"10px"}
                   width="100%"
                   overflow={"hidden"}
                   height={"450px"}
-                  position={'relative'}
+                  position={"relative"}
                   sx={{
-                    width:{
-                      NoteL:'350px',
-                      Planshet:'180px'
+                    width: {
+                      NoteL: "320px",
+                      Planshet: "180px",
                     },
-                    height:{
-                      NoteL:'',
-                      Planshet:'300px'
-                    }
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "290px",
+                    },
                   }}
                 >
-                  <img src={Xarli} alt="" style={{width:'100%',height:"100%"}}/>
+                  <img
+                    src={Xarli}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
                   <Box
                     sx={[
                       {
@@ -704,7 +920,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "18px",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
                     lineHeight: "22px",
                     color: "#FFF",
                   }}
@@ -717,33 +937,47 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'15px',
+                      Phone:"10px"
+                    },
                     lineHeight: "18px",
                     color: "#F2F60F",
                   }}
                 >
-                  Фантастика, фэнтези, 
+                  Фантастика, фэнтези,
                 </Typography>
               </Box>
-              <Box>
+              <Box sx={{
+                display: {
+                  NoteL: "block",
+                  Planshet: "block",
+                  Phone: "none",
+                },
+              }}>
                 <Box
                   borderRadius={"10px"}
                   width="100%"
                   overflow={"hidden"}
                   height={"450px"}
-                  position={'relative'}
+                  position={"relative"}
                   sx={{
-                    width:{
-                      NoteL:'350px',
-                      Planshet:'180px'
+                    width: {
+                      NoteL: "320px",
+                      Planshet: "180px",
                     },
-                    height:{
-                      NoteL:'',
-                      Planshet:'300px'
-                    }
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "290px",
+                    },
                   }}
                 >
-                  <img src={Police} alt="" style={{width:'100%',height:'100%'}}/>
+                  <img
+                    src={Police}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
                   <Box
                     sx={[
                       {
@@ -779,7 +1013,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "18px",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
                     lineHeight: "22px",
                     color: "#FFF",
                   }}
@@ -792,7 +1030,11 @@ class Content extends Component {
                     fontStyle: "normal",
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
-                    fontSize: "15px",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'15px',
+                      Phone:"10px"
+                    },
                     lineHeight: "18px",
                     color: "#F2F60F",
                   }}
@@ -802,18 +1044,272 @@ class Content extends Component {
               </Box>
             </Box>
           </Box>
-          <Link to='/Films' style={{margin:'50px'}}>
-          <Button
-            sx={{
-              border: "1px solid #fff",
-              color: "#fff",
-              padding: "10px 20px",
-              mt: "5%",
-            }}
+          <Box sx={{
+                display: {
+                  NoteL: "none",
+                  Planshet: "none",
+                  Phone: "block",
+                },
+              }}>
+            <Box width={"90%"} mt="5%" display={"flex"} gap={"10px"} sx={{
+            marginLeft:{
+              Planshet:"0px",
+              NoteL:"0px",
+              Phone:"20px"
+            }
+          }}>
+            <Box sx={{
+                display: {
+                  NoteL: "none",
+                  Planshet: "none",
+                  Phone: "block",
+                },
+              }}>
+                <Box
+                  borderRadius={"10px"}
+                  width="100%"
+                  overflow={"hidden"}
+                  height={"450px"}
+                  position={"relative"}
+                  sx={{
+                    width: {
+                      NoteL: "320px",
+                      Planshet: "180px",
+                    },
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "290px",
+                    },
+                  }}
+                >
+                  <img
+                    src={Xarli}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                  <Box
+                    sx={[
+                      {
+                        width: "100%",
+                        height: "100%",
+                        bgcolor: "transparent",
+                        position: "absolute",
+                        top: "300px",
+                        zIndex: "10",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      },
+                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                    ]}
+                  >
+                    <Button
+                      sx={[
+                        {
+                          bgcolor: "#fff",
+                          padding: "10px 20px",
+                          borderRadius: "10px",
+                        },
+                      ]}
+                    >
+                      Карточка фильма
+                    </Button>
+                  </Box>
+                </Box>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontStyle: "normal",
+                    fontFamily: "-moz-initial",
+                    fontWeight: "400",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
+                    lineHeight: "22px",
+                    color: "#FFF",
+                  }}
+                >
+                  Звёздные войны
+                </Typography>
+                <Typography
+                  variant="p"
+                  sx={{
+                    fontStyle: "normal",
+                    fontFamily: "-moz-initial",
+                    fontWeight: "400",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'15px',
+                      Phone:"10px"
+                    },
+                    lineHeight: "18px",
+                    color: "#F2F60F",
+                  }}
+                >
+                  Фантастика, фэнтези,
+                </Typography>
+              </Box>
+              <Box sx={{
+                display: {
+                  NoteL: "none",
+                  Planshet: "none",
+                  Phone: "block",
+                },
+              }}>
+                <Box
+                  borderRadius={"10px"}
+                  width="100%"
+                  overflow={"hidden"}
+                  height={"450px"}
+                  position={"relative"}
+                  sx={{
+                    width: {
+                      NoteL: "320px",
+                      Planshet: "180px",
+                    },
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "290px",
+                    },
+                  }}
+                >
+                  <img
+                    src={Police}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                  <Box
+                    sx={[
+                      {
+                        width: "100%",
+                        height: "100%",
+                        bgcolor: "transparent",
+                        position: "absolute",
+                        top: "300px",
+                        zIndex: "10",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      },
+                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                    ]}
+                  >
+                    <Button
+                      sx={[
+                        {
+                          bgcolor: "#fff",
+                          padding: "10px 20px",
+                          borderRadius: "10px",
+                        },
+                      ]}
+                    >
+                      Карточка фильма
+                    </Button>
+                  </Box>
+                </Box>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontStyle: "normal",
+                    fontFamily: "-moz-initial",
+                    fontWeight: "400",
+                    fontSize: {
+                      NoteL:"18px",
+                      Planshet:"18px",
+                      Phone:"14px"
+                    },
+                    lineHeight: "22px",
+                    color: "#FFF",
+                  }}
+                >
+                  Джентльмены
+                </Typography>
+                <Typography
+                  variant="p"
+                  sx={{
+                    fontStyle: "normal",
+                    fontFamily: "-moz-initial",
+                    fontWeight: "400",
+                    fontSize: {
+                      NoteL:"15px",
+                      Planshet:'15px',
+                      Phone:"10px"
+                    },
+                    lineHeight: "18px",
+                    color: "#F2F60F",
+                  }}
+                >
+                  Боевик, комедия, криминал
+                </Typography>
+              </Box>
+              <Box sx={{
+                display: {
+                  NoteL: "none",
+                  Planshet: "none",
+                  Phone: "block",
+                },
+              }}>
+            <Box borderRadius="10px" overflow={"hidden"} sx={{
+                width:{
+                  NoteL:'330px',
+                  Planshet:'180px'
+                },
+                height:{
+                  NoteL:'450px',
+                  Planshet:'300px'
+                }
+            }}>
+              <img src={istoriya} alt="" style={{width:'100%',height:'100%'}}/>
+            </Box>
+            <Typography
+              variant="h5"
+              sx={{
+                fontStyle: "normal",
+                fontFamily: "-moz-initial",
+                fontWeight: "400",
+                fontSize: {
+                  NoteL:"18px",
+                  Planshet:"18px",
+                  Phone:"14px"
+                },
+                lineHeight: "22px",
+                color: "#FFF",
+              }}
             >
-            Все новинки
-          </Button>
-            </Link>
+                История игрушек 4
+            </Typography>
+            <Typography variant="p"
+               sx={{
+                fontStyle: "normal",
+                fontFamily: "-moz-initial",
+                fontWeight: "400",
+                fontSize: {
+                  NoteL:"15px",
+                  Planshet:'15px',
+                  Phone:"10px"
+                },
+                lineHeight: "18px",
+                color: "#F2F60F",
+              }}>
+            Мультфильм, фэнтези
+            </Typography>
+          </Box>
+            </Box>
+          </Box>
+          <Link to="/Films" style={{ margin: "50px" }}>
+            <Button
+              sx={{
+                border: "1px solid #fff",
+                color: "#fff",
+                padding: {NoteL:"10px 20px",Planshet:"10px 20px",Phone:"5px 10px"},
+                mt: "5%",
+              }}
+            >
+              Все новинки
+            </Button>
+          </Link>
         </Box>
       </Box>
     );
