@@ -9,11 +9,20 @@ import Fort from "../images/Ford.jpg";
 import Siyu from "../images/3022.jpg";
 import Xarli from "../images/Xarli.jpg";
 import Police from "../images/Police.jpg";
-import istoriya from '../images/istoriya.jpg'
-import { Link } from "react-router-dom";
+import istoriya from "../images/istoriya.jpg";
+import { Link, Routes, Route } from "react-router-dom";
+import { Film } from "./Film/Film";
+import { useNavigate } from "react-router-dom";
 
 class Content extends Component {
+  // state = [
+  //   useNavigate(navigate)
+  // ];
   render() {
+    this.ItemProduction = (item) => {
+      // this.state.navigate("/1");
+      console.log(item);
+    };
     return (
       <Box>
         <Box
@@ -211,112 +220,909 @@ class Content extends Component {
               </Typography>
             </Box>
           </Box>
-          <Box>
-            <Box width={"90%"} mt={"5%"} display={"flex"} gap={"10px"}sx={{
-            marginLeft:{
-              Planshet:"0px",
-              NoteL:"0px",
-              Phone:"20px"
-            }
-          }}>
-              <Box >
+          {this.props.films.map((item, index) => (
+            <Box>
+              <Box>
                 <Box
-                  sx={[
-                    {
-                      borderRadius: "10px",
-                      width: {
-                        NoteL: "320px",
-                        Planshet: "180px",
-                      },
-                      height: {
-                        NoteL: "450px",
-                        Planshet: "300px",
-                      },
-                      overflow: "hidden",
-                      position: "relative",
-                      marginLeft: {
-                        Planshet: "8px",
-                        NateL: "0px",
-                        
-                      },
+                  width={"90%"}
+                  mt={"5%"}
+                  display={"flex"}
+                  gap={"10px"}
+                  sx={{
+                    marginLeft: {
+                      Planshet: "0px",
+                      NoteL: "0px",
+                      Phone: "20px",
                     },
-                  ]}
+                  }}
                 >
-                  <img
-                    src={Escape}
-                    alt=""
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        height: "100%",
-                        bgcolor: "transparent",
-                        position: "absolute",
-                        top: "300px",
-                        zIndex: "10",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      },
-                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
-                    ]}
-                  >
-                    <Button
+                  <Box>
+                    <Box
                       sx={[
                         {
-                          bgcolor: "#fff",
-                          padding: "10px 20px",
                           borderRadius: "10px",
+                          width: {
+                            NoteL: "320px",
+                            Planshet: "180px",
+                          },
+                          height: {
+                            NoteL: "450px",
+                            Planshet: "300px",
+                          },
+                          overflow: "hidden",
+                          position: "relative",
+                          marginLeft: {
+                            Planshet: "8px",
+                            NateL: "0px",
+                          },
                         },
                       ]}
                     >
-                      Карточка фильма
-                    </Button>
+                      <img
+                        src={Escape}
+                        alt=""
+                        style={{ width: "100%", height: "100%" }}
+                      />
+                      <Box
+                        sx={[
+                          {
+                            width: "100%",
+                            height: "100%",
+                            bgcolor: "transparent",
+                            position: "absolute",
+                            top: "300px",
+                            zIndex: "10",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          },
+                          { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                        ]}
+                      >
+                        <Button
+                          sx={[
+                            {
+                              bgcolor: "#fff",
+                              padding: "10px 20px",
+                              borderRadius: "10px",
+                            },
+                          ]}
+                        >
+                          Карточка фильма
+                        </Button>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "18px",
+                          Planshet: "18px",
+                          Phone: "14px",
+                        },
+                        lineHeight: "22px",
+                        color: "#FFF",
+                      }}
+                    >
+                      Побег из Претории
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: "15px",
+                        lineHeight: "18px",
+                        color: "#F2F60F",
+                      }}
+                    >
+                      Триллер
+                    </Typography>
+                  </Box>
+                  <Box
+                  // border={'1px solid red'}
+                  >
+                    <Box
+                      borderRadius={"10px"}
+                      // width="100%"
+                      overflow={"hidden"}
+                      height={"450px"}
+                      position={"relative"}
+                      // border={'1px solid red'}
+                      sx={{
+                        width: {
+                          NoteL: "320px",
+                          Planshet: "180px",
+                        },
+                        height: {
+                          NoteL: "450px",
+                          Planshet: "290px",
+                        },
+                      }}
+                    >
+                      <img
+                        src={Jokker}
+                        alt=""
+                        style={{ width: "100%", height: "100%" }}
+                      />
+                      <Box
+                        sx={[
+                          {
+                            width: "100%",
+                            height: "100%",
+                            bgcolor: "transparent",
+                            position: "absolute",
+                            top: "250px",
+                            zIndex: "10",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          },
+                          { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                        ]}
+                      >
+                        <Link to={""}>
+                          <Button
+                            key={index}
+                            onClick={() => this.ItemProduction(item)}
+                            sx={[
+                              {
+                                bgcolor: "#fff",
+                                padding: "10px 20px",
+                                borderRadius: "10px",
+                              },
+                            ]}
+                          >
+                            Карточка фильма
+                          </Button>
+                          <Routes>
+                            {" "}
+                            <Route
+                              path="/Film"
+                              element={<Film films={this.props.films} />}
+                            />
+                          </Routes>
+                        </Link>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "18px",
+                          Planshet: "18px",
+                          Phone: "14px",
+                        },
+                        lineHeight: "22px",
+                        color: "#FFF",
+                      }}
+                    >
+                      Джокер
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "15px",
+                          Planshet: "15px",
+                          Phone: "10px",
+                        },
+                        lineHeight: "18px",
+                        color: "#F2F60F",
+                      }}
+                    >
+                      Триллер, драма, криминал
+                    </Typography>
+                  </Box>
+                  <Box>
+                    <Box
+                      borderRadius={"10px"}
+                      width="100%"
+                      overflow={"hidden"}
+                      height={"450px"}
+                      position={"relative"}
+                      sx={{
+                        width: {
+                          NoteL: "330px",
+                          Planshet: "180px",
+                        },
+                        height: {
+                          NoteL: "450px",
+                          Planshet: "300px",
+                        },
+                      }}
+                    >
+                      <img
+                        src={opoqi}
+                        alt=""
+                        style={{ width: "100%", height: "100%" }}
+                      />
+                      <Box
+                        sx={[
+                          {
+                            width: "100%",
+                            height: "100%",
+                            bgcolor: "transparent",
+                            position: "absolute",
+                            top: "300px",
+                            zIndex: "10",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          },
+                          { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                        ]}
+                      >
+                        <Button
+                          sx={[
+                            {
+                              bgcolor: "#fff",
+                              padding: "10px 20px",
+                              borderRadius: "10px",
+                            },
+                          ]}
+                        >
+                          Карточка фильма
+                        </Button>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "18px",
+                          Planshet: "18px",
+                          Phone: "14px",
+                        },
+                        lineHeight: "22px",
+                        color: "#FFF",
+                      }}
+                    >
+                      Звёздные войны:
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "15px",
+                          Planshet: "15px",
+                          Phone: "10px",
+                        },
+                        lineHeight: "18px",
+                        color: "#F2F60F",
+                      }}
+                    >
+                      Фантастика, фэнтези,
+                    </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: {
+                        NoteL: "block",
+                        Planshet: "block",
+                        Phone: "none",
+                      },
+                    }}
+                  >
+                    <Box
+                      borderRadius={"10px"}
+                      width="100%"
+                      overflow={"hidden"}
+                      height={"450px"}
+                      position={"relative"}
+                      sx={{
+                        width: {
+                          NoteL: "320px",
+                          Planshet: "180px",
+                        },
+                        height: {
+                          NoteL: "450px",
+                          Planshet: "290px",
+                        },
+                      }}
+                    >
+                      <img
+                        src={Xennam}
+                        alt=""
+                        style={{ width: "100%", height: "100%" }}
+                      />
+                      <Box
+                        sx={[
+                          {
+                            width: "100%",
+                            height: "100%",
+                            bgcolor: "transparent",
+                            position: "absolute",
+                            top: "300px",
+                            zIndex: "10",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          },
+                          { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                        ]}
+                      >
+                        <Button
+                          sx={[
+                            {
+                              bgcolor: "#fff",
+                              padding: "10px 20px",
+                              borderRadius: "10px",
+                            },
+                          ]}
+                        >
+                          Карточка фильма
+                        </Button>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "18px",
+                          Planshet: "18px",
+                          Phone: "14px",
+                        },
+                        lineHeight: "22px",
+                        color: "#FFF",
+                      }}
+                    >
+                      Джентльмены
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "15px",
+                          Planshet: "15px",
+                          Phone: "10px",
+                        },
+                        lineHeight: "18px",
+                        color: "#F2F60F",
+                      }}
+                    >
+                      Боевик, комедия, криминал
+                    </Typography>
                   </Box>
                 </Box>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
-                    },
-                    lineHeight: "22px",
-                    color: "#FFF",
-                  }}
-                >
-                  Побег из Претории
-                </Typography>
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: "15px",
-                    lineHeight: "18px",
-                    color: "#F2F60F",
-                  }}
-                >
-                  Триллер
-                </Typography>
               </Box>
+
+              <Box>
+                <Box
+                  width={"90%"}
+                  mt="5%"
+                  display={"flex"}
+                  gap={"10px"}
+                  sx={{
+                    marginLeft: {
+                      Planshet: "0px",
+                      NoteL: "0px",
+                      Phone: "20px",
+                    },
+                  }}
+                >
+                  <Box
+                    sx={{
+                      display: {
+                        NoteL: "none",
+                        Planshet: "none",
+                        Phone: "block",
+                      },
+                    }}
+                  >
+                    <Box
+                      borderRadius={"10px"}
+                      width="100%"
+                      overflow={"hidden"}
+                      height={"450px"}
+                      position={"relative"}
+                      sx={{
+                        width: {
+                          NoteL: "320px",
+                          Planshet: "180px",
+                        },
+                        height: {
+                          NoteL: "450px",
+                          Planshet: "290px",
+                        },
+                      }}
+                    >
+                      <img
+                        src={Xennam}
+                        alt=""
+                        style={{ width: "100%", height: "100%" }}
+                      />
+                      <Box
+                        sx={[
+                          {
+                            width: "100%",
+                            height: "100%",
+                            bgcolor: "transparent",
+                            position: "absolute",
+                            top: "300px",
+                            zIndex: "10",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          },
+                          { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                        ]}
+                      >
+                        <Button
+                          sx={[
+                            {
+                              bgcolor: "#fff",
+                              padding: "10px 20px",
+                              borderRadius: "10px",
+                            },
+                          ]}
+                        >
+                          Карточка фильма
+                        </Button>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "18px",
+                          Planshet: "18px",
+                          Phone: "14px",
+                        },
+                        lineHeight: "22px",
+                        color: "#FFF",
+                      }}
+                    >
+                      Джентльмены
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "15px",
+                          Planshet: "15px",
+                          Phone: "10px",
+                        },
+                        lineHeight: "18px",
+                        color: "#F2F60F",
+                      }}
+                    >
+                      Боевик, комедия, криминал
+                    </Typography>
+                  </Box>
+                  <Box>
+                    <Box
+                      borderRadius={"10px"}
+                      width="100%"
+                      overflow={"hidden"}
+                      height={"450px"}
+                      position={"relative"}
+                      sx={{
+                        width: {
+                          NoteL: "320px",
+                          Planshet: "180px",
+                        },
+                        height: {
+                          NoteL: "450px",
+                          Planshet: "290px",
+                        },
+                      }}
+                    >
+                      <img
+                        src={Fort}
+                        alt=""
+                        style={{ width: "100%", height: "100%" }}
+                      />
+                      <Box
+                        sx={[
+                          {
+                            width: "100%",
+                            height: "100%",
+                            bgcolor: "transparent",
+                            position: "absolute",
+                            top: "300px",
+                            zIndex: "10",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          },
+                          { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                        ]}
+                      >
+                        <Button
+                          sx={[
+                            {
+                              bgcolor: "#fff",
+                              padding: "10px 20px",
+                              borderRadius: "10px",
+                            },
+                          ]}
+                        >
+                          Карточка фильма
+                        </Button>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "18px",
+                          Planshet: "18px",
+                          Phone: "14px",
+                        },
+                        lineHeight: "22px",
+                        color: "#FFF",
+                      }}
+                    >
+                      Побег из Претории
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "15px",
+                          Planshet: "15px",
+                          Phone: "10px",
+                        },
+                        lineHeight: "18px",
+                        color: "#F2F60F",
+                      }}
+                    >
+                      Триллер
+                    </Typography>
+                  </Box>
+                  <Box>
+                    <Box
+                      borderRadius={"10px"}
+                      width="100%"
+                      overflow={"hidden"}
+                      height={"450px"}
+                      position={"relative"}
+                      sx={{
+                        width: {
+                          NoteL: "320px",
+                          Planshet: "180px",
+                        },
+                        height: {
+                          NoteL: "450px",
+                          Planshet: "290px",
+                        },
+                      }}
+                    >
+                      <img
+                        src={Siyu}
+                        alt=""
+                        style={{ width: "100%", height: "100%" }}
+                      />
+                      <Box
+                        sx={[
+                          {
+                            width: "100%",
+                            height: "100%",
+                            bgcolor: "transparent",
+                            position: "absolute",
+                            top: "300px",
+                            zIndex: "10",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          },
+                          { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                        ]}
+                      >
+                        <Button
+                          sx={[
+                            {
+                              bgcolor: "#fff",
+                              padding: "10px 20px",
+                              borderRadius: "10px",
+                            },
+                          ]}
+                        >
+                          Карточка фильма
+                        </Button>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "18px",
+                          Planshet: "18px",
+                          Phone: "14px",
+                        },
+                        lineHeight: "22px",
+                        color: "#FFF",
+                      }}
+                    >
+                      Джокер
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "15px",
+                          Planshet: "15px",
+                          Phone: "10px",
+                        },
+                        lineHeight: "18px",
+                        color: "#F2F60F",
+                      }}
+                    >
+                      Триллер, драма, криминал
+                    </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: {
+                        NoteL: "block",
+                        Planshet: "block",
+                        Phone: "none",
+                      },
+                    }}
+                  >
+                    <Box
+                      borderRadius={"10px"}
+                      width="100%"
+                      overflow={"hidden"}
+                      height={"450px"}
+                      position={"relative"}
+                      sx={{
+                        width: {
+                          NoteL: "320px",
+                          Planshet: "180px",
+                        },
+                        height: {
+                          NoteL: "450px",
+                          Planshet: "290px",
+                        },
+                      }}
+                    >
+                      <img
+                        src={Xarli}
+                        alt=""
+                        style={{ width: "100%", height: "100%" }}
+                      />
+                      <Box
+                        sx={[
+                          {
+                            width: "100%",
+                            height: "100%",
+                            bgcolor: "transparent",
+                            position: "absolute",
+                            top: "300px",
+                            zIndex: "10",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          },
+                          { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                        ]}
+                      >
+                        <Button
+                          sx={[
+                            {
+                              bgcolor: "#fff",
+                              padding: "10px 20px",
+                              borderRadius: "10px",
+                            },
+                          ]}
+                        >
+                          Карточка фильма
+                        </Button>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "18px",
+                          Planshet: "18px",
+                          Phone: "14px",
+                        },
+                        lineHeight: "22px",
+                        color: "#FFF",
+                      }}
+                    >
+                      Звёздные войны
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "15px",
+                          Planshet: "15px",
+                          Phone: "10px",
+                        },
+                        lineHeight: "18px",
+                        color: "#F2F60F",
+                      }}
+                    >
+                      Фантастика, фэнтези,
+                    </Typography>
+                  </Box>
+                  <Box
+                    sx={{
+                      display: {
+                        NoteL: "block",
+                        Planshet: "block",
+                        Phone: "none",
+                      },
+                    }}
+                  >
+                    <Box
+                      borderRadius={"10px"}
+                      width="100%"
+                      overflow={"hidden"}
+                      height={"450px"}
+                      position={"relative"}
+                      sx={{
+                        width: {
+                          NoteL: "320px",
+                          Planshet: "180px",
+                        },
+                        height: {
+                          NoteL: "450px",
+                          Planshet: "290px",
+                        },
+                      }}
+                    >
+                      <img
+                        src={Police}
+                        alt=""
+                        style={{ width: "100%", height: "100%" }}
+                      />
+                      <Box
+                        sx={[
+                          {
+                            width: "100%",
+                            height: "100%",
+                            bgcolor: "transparent",
+                            position: "absolute",
+                            top: "300px",
+                            zIndex: "10",
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                          },
+                          { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                        ]}
+                      >
+                        <Button
+                          sx={[
+                            {
+                              bgcolor: "#fff",
+                              padding: "10px 20px",
+                              borderRadius: "10px",
+                            },
+                          ]}
+                        >
+                          Карточка фильма
+                        </Button>
+                      </Box>
+                    </Box>
+                    <Typography
+                      variant="h5"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "18px",
+                          Planshet: "18px",
+                          Phone: "14px",
+                        },
+                        lineHeight: "22px",
+                        color: "#FFF",
+                      }}
+                    >
+                      Джентльмены
+                    </Typography>
+                    <Typography
+                      variant="p"
+                      sx={{
+                        fontStyle: "normal",
+                        fontFamily: "-moz-initial",
+                        fontWeight: "400",
+                        fontSize: {
+                          NoteL: "15px",
+                          Planshet: "15px",
+                          Phone: "10px",
+                        },
+                        lineHeight: "18px",
+                        color: "#F2F60F",
+                      }}
+                    >
+                      Боевик, комедия, криминал
+                    </Typography>
+                  </Box>
+                </Box>
+              </Box>
+            </Box>
+          ))}
+          <Box
+            sx={{
+              display: {
+                NoteL: "none",
+                Planshet: "none",
+                Phone: "block",
+              },
+            }}
+          >
+            <Box
+              width={"90%"}
+              mt="5%"
+              display={"flex"}
+              gap={"10px"}
+              sx={{
+                marginLeft: {
+                  Planshet: "0px",
+                  NoteL: "0px",
+                  Phone: "20px",
+                },
+              }}
+            >
               <Box
-              // border={'1px solid red'}
+                sx={{
+                  display: {
+                    NoteL: "none",
+                    Planshet: "none",
+                    Phone: "block",
+                  },
+                }}
               >
                 <Box
                   borderRadius={"10px"}
-                  // width="100%"
+                  width="100%"
                   overflow={"hidden"}
                   height={"450px"}
                   position={"relative"}
-                  // border={'1px solid red'}
                   sx={{
                     width: {
                       NoteL: "320px",
@@ -329,7 +1135,7 @@ class Content extends Component {
                   }}
                 >
                   <img
-                    src={Jokker}
+                    src={Xarli}
                     alt=""
                     style={{ width: "100%", height: "100%" }}
                   />
@@ -369,15 +1175,15 @@ class Content extends Component {
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
                     fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
+                      NoteL: "18px",
+                      Planshet: "18px",
+                      Phone: "14px",
                     },
                     lineHeight: "22px",
                     color: "#FFF",
                   }}
                 >
-                  Джокер
+                  Звёздные войны
                 </Typography>
                 <Typography
                   variant="p"
@@ -386,24 +1192,124 @@ class Content extends Component {
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
                     fontSize: {
-                      NoteL:"15px",
-                      Planshet:'15px',
-                      Phone:"10px"
+                      NoteL: "15px",
+                      Planshet: "15px",
+                      Phone: "10px",
                     },
                     lineHeight: "18px",
                     color: "#F2F60F",
                   }}
                 >
-                  Триллер, драма, криминал
+                  Фантастика, фэнтези,
                 </Typography>
               </Box>
-              <Box>
+              <Box
+                sx={{
+                  display: {
+                    NoteL: "none",
+                    Planshet: "none",
+                    Phone: "block",
+                  },
+                }}
+              >
                 <Box
                   borderRadius={"10px"}
                   width="100%"
                   overflow={"hidden"}
                   height={"450px"}
                   position={"relative"}
+                  sx={{
+                    width: {
+                      NoteL: "320px",
+                      Planshet: "180px",
+                    },
+                    height: {
+                      NoteL: "450px",
+                      Planshet: "290px",
+                    },
+                  }}
+                >
+                  <img
+                    src={Police}
+                    alt=""
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                  <Box
+                    sx={[
+                      {
+                        width: "100%",
+                        height: "100%",
+                        bgcolor: "transparent",
+                        position: "absolute",
+                        top: "300px",
+                        zIndex: "10",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                      },
+                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
+                    ]}
+                  >
+                    <Button
+                      sx={[
+                        {
+                          bgcolor: "#fff",
+                          padding: "10px 20px",
+                          borderRadius: "10px",
+                        },
+                      ]}
+                    >
+                      Карточка фильма
+                    </Button>
+                  </Box>
+                </Box>
+                <Typography
+                  variant="h5"
+                  sx={{
+                    fontStyle: "normal",
+                    fontFamily: "-moz-initial",
+                    fontWeight: "400",
+                    fontSize: {
+                      NoteL: "18px",
+                      Planshet: "18px",
+                      Phone: "14px",
+                    },
+                    lineHeight: "22px",
+                    color: "#FFF",
+                  }}
+                >
+                  Джентльмены
+                </Typography>
+                <Typography
+                  variant="p"
+                  sx={{
+                    fontStyle: "normal",
+                    fontFamily: "-moz-initial",
+                    fontWeight: "400",
+                    fontSize: {
+                      NoteL: "15px",
+                      Planshet: "15px",
+                      Phone: "10px",
+                    },
+                    lineHeight: "18px",
+                    color: "#F2F60F",
+                  }}
+                >
+                  Боевик, комедия, криминал
+                </Typography>
+              </Box>
+              <Box
+                sx={{
+                  display: {
+                    NoteL: "none",
+                    Planshet: "none",
+                    Phone: "block",
+                  },
+                }}
+              >
+                <Box
+                  borderRadius="10px"
+                  overflow={"hidden"}
                   sx={{
                     width: {
                       NoteL: "330px",
@@ -416,38 +1322,10 @@ class Content extends Component {
                   }}
                 >
                   <img
-                    src={opoqi}
+                    src={istoriya}
                     alt=""
                     style={{ width: "100%", height: "100%" }}
                   />
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        height: "100%",
-                        bgcolor: "transparent",
-                        position: "absolute",
-                        top: "300px",
-                        zIndex: "10",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      },
-                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
-                    ]}
-                  >
-                    <Button
-                      sx={[
-                        {
-                          bgcolor: "#fff",
-                          padding: "10px 20px",
-                          borderRadius: "10px",
-                        },
-                      ]}
-                    >
-                      Карточка фильма
-                    </Button>
-                  </Box>
                 </Box>
                 <Typography
                   variant="h5"
@@ -456,15 +1334,15 @@ class Content extends Component {
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
                     fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
+                      NoteL: "18px",
+                      Planshet: "18px",
+                      Phone: "14px",
                     },
                     lineHeight: "22px",
                     color: "#FFF",
                   }}
                 >
-                  Звёздные войны:
+                  История игрушек 4
                 </Typography>
                 <Typography
                   variant="p"
@@ -473,829 +1351,17 @@ class Content extends Component {
                     fontFamily: "-moz-initial",
                     fontWeight: "400",
                     fontSize: {
-                      NoteL:"15px",
-                      Planshet:'15px',
-                      Phone:"10px"
+                      NoteL: "15px",
+                      Planshet: "15px",
+                      Phone: "10px",
                     },
                     lineHeight: "18px",
                     color: "#F2F60F",
                   }}
                 >
-                  Фантастика, фэнтези,
+                  Мультфильм, фэнтези
                 </Typography>
               </Box>
-              <Box sx={{
-                display: {
-                  NoteL: "block",
-                  Planshet: "block",
-                  Phone: "none",
-                },
-              }}>
-                <Box
-                  borderRadius={"10px"}
-                  width="100%"
-                  overflow={"hidden"}
-                  height={"450px"}
-                  position={"relative"}
-                  sx={{
-                    width: {
-                      NoteL: "320px",
-                      Planshet: "180px",
-                    },
-                    height: {
-                      NoteL: "450px",
-                      Planshet: "290px",
-                    },
-                    
-                  }}
-                >
-                  <img
-                    src={Xennam}
-                    alt=""
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        height: "100%",
-                        bgcolor: "transparent",
-                        position: "absolute",
-                        top: "300px",
-                        zIndex: "10",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      },
-                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
-                    ]}
-                  >
-                    <Button
-                      sx={[
-                        {
-                          bgcolor: "#fff",
-                          padding: "10px 20px",
-                          borderRadius: "10px",
-                        },
-                      ]}
-                    >
-                      Карточка фильма
-                    </Button>
-                  </Box>
-                </Box>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
-                    },
-                    lineHeight: "22px",
-                    color: "#FFF",
-                  }}
-                >
-                  Джентльмены
-                </Typography>
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"15px",
-                      Planshet:'15px',
-                      Phone:"10px"
-                    },
-                    lineHeight: "18px",
-                    color: "#F2F60F",
-                  }}
-                >
-                  Боевик, комедия, криминал
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-          <Box>
-            <Box width={"90%"} mt="5%" display={"flex"} gap={"10px"} sx={{
-            marginLeft:{
-              Planshet:"0px",
-              NoteL:"0px",
-              Phone:"20px"
-            }
-          }}>
-            <Box sx={{
-                display: {
-                  NoteL: "none",
-                  Planshet: "none",
-                  Phone: "block",
-                },
-              }}>
-                <Box
-                  borderRadius={"10px"}
-                  width="100%"
-                  overflow={"hidden"}
-                  height={"450px"}
-                  position={"relative"}
-                  sx={{
-                    width: {
-                      NoteL: "320px",
-                      Planshet: "180px",
-                    },
-                    height: {
-                      NoteL: "450px",
-                      Planshet: "290px",
-                    },
-                    
-                  }}
-                >
-                  <img
-                    src={Xennam}
-                    alt=""
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        height: "100%",
-                        bgcolor: "transparent",
-                        position: "absolute",
-                        top: "300px",
-                        zIndex: "10",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      },
-                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
-                    ]}
-                  >
-                    <Button
-                      sx={[
-                        {
-                          bgcolor: "#fff",
-                          padding: "10px 20px",
-                          borderRadius: "10px",
-                        },
-                      ]}
-                    >
-                      Карточка фильма
-                    </Button>
-                  </Box>
-                </Box>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
-                    },
-                    lineHeight: "22px",
-                    color: "#FFF",
-                  }}
-                >
-                  Джентльмены
-                </Typography>
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"15px",
-                      Planshet:'15px',
-                      Phone:"10px"
-                    },
-                    lineHeight: "18px",
-                    color: "#F2F60F",
-                  }}
-                >
-                  Боевик, комедия, криминал
-                </Typography>
-              </Box>
-              <Box>
-                <Box
-                  borderRadius={"10px"}
-                  width="100%"
-                  overflow={"hidden"}
-                  height={"450px"}
-                  position={"relative"}
-                  sx={{
-                    width: {
-                      NoteL: "320px",
-                      Planshet: "180px",
-                    },
-                    height: {
-                      NoteL: "450px",
-                      Planshet: "290px",
-                    },
-                  }}
-                >
-                  <img
-                    src={Fort}
-                    alt=""
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        height: "100%",
-                        bgcolor: "transparent",
-                        position: "absolute",
-                        top: "300px",
-                        zIndex: "10",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      },
-                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
-                    ]}
-                  >
-                    <Button
-                      sx={[
-                        {
-                          bgcolor: "#fff",
-                          padding: "10px 20px",
-                          borderRadius: "10px",
-                        },
-                      ]}
-                    >
-                      Карточка фильма
-                    </Button>
-                  </Box>
-                </Box>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
-                    },
-                    lineHeight: "22px",
-                    color: "#FFF",
-                  }}
-                >
-                  Побег из Претории
-                </Typography>
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"15px",
-                      Planshet:'15px',
-                      Phone:"10px"
-                    },
-                    lineHeight: "18px",
-                    color: "#F2F60F",
-                  }}
-                >
-                  Триллер
-                </Typography>
-              </Box>
-              <Box>
-                <Box
-                  borderRadius={"10px"}
-                  width="100%"
-                  overflow={"hidden"}
-                  height={"450px"}
-                  position={"relative"}
-                  sx={{
-                    width: {
-                      NoteL: "320px",
-                      Planshet: "180px",
-                    },
-                    height: {
-                      NoteL: "450px",
-                      Planshet: "290px",
-                    },
-                  }}
-                >
-                  <img
-                    src={Siyu}
-                    alt=""
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        height: "100%",
-                        bgcolor: "transparent",
-                        position: "absolute",
-                        top: "300px",
-                        zIndex: "10",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      },
-                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
-                    ]}
-                  >
-                    <Button
-                      sx={[
-                        {
-                          bgcolor: "#fff",
-                          padding: "10px 20px",
-                          borderRadius: "10px",
-                        },
-                      ]}
-                    >
-                      Карточка фильма
-                    </Button>
-                  </Box>
-                </Box>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
-                    },
-                    lineHeight: "22px",
-                    color: "#FFF",
-                  }}
-                >
-                  Джокер
-                </Typography>
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"15px",
-                      Planshet:'15px',
-                      Phone:"10px"
-                    },
-                    lineHeight: "18px",
-                    color: "#F2F60F",
-                  }}
-                >
-                  Триллер, драма, криминал
-                </Typography>
-              </Box>
-              <Box sx={{
-                display: {
-                  NoteL: "block",
-                  Planshet: "block",
-                  Phone: "none",
-                },
-              }}>
-                <Box
-                  borderRadius={"10px"}
-                  width="100%"
-                  overflow={"hidden"}
-                  height={"450px"}
-                  position={"relative"}
-                  sx={{
-                    width: {
-                      NoteL: "320px",
-                      Planshet: "180px",
-                    },
-                    height: {
-                      NoteL: "450px",
-                      Planshet: "290px",
-                    },
-                  }}
-                >
-                  <img
-                    src={Xarli}
-                    alt=""
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        height: "100%",
-                        bgcolor: "transparent",
-                        position: "absolute",
-                        top: "300px",
-                        zIndex: "10",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      },
-                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
-                    ]}
-                  >
-                    <Button
-                      sx={[
-                        {
-                          bgcolor: "#fff",
-                          padding: "10px 20px",
-                          borderRadius: "10px",
-                        },
-                      ]}
-                    >
-                      Карточка фильма
-                    </Button>
-                  </Box>
-                </Box>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
-                    },
-                    lineHeight: "22px",
-                    color: "#FFF",
-                  }}
-                >
-                  Звёздные войны
-                </Typography>
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"15px",
-                      Planshet:'15px',
-                      Phone:"10px"
-                    },
-                    lineHeight: "18px",
-                    color: "#F2F60F",
-                  }}
-                >
-                  Фантастика, фэнтези,
-                </Typography>
-              </Box>
-              <Box sx={{
-                display: {
-                  NoteL: "block",
-                  Planshet: "block",
-                  Phone: "none",
-                },
-              }}>
-                <Box
-                  borderRadius={"10px"}
-                  width="100%"
-                  overflow={"hidden"}
-                  height={"450px"}
-                  position={"relative"}
-                  sx={{
-                    width: {
-                      NoteL: "320px",
-                      Planshet: "180px",
-                    },
-                    height: {
-                      NoteL: "450px",
-                      Planshet: "290px",
-                    },
-                  }}
-                >
-                  <img
-                    src={Police}
-                    alt=""
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        height: "100%",
-                        bgcolor: "transparent",
-                        position: "absolute",
-                        top: "300px",
-                        zIndex: "10",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      },
-                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
-                    ]}
-                  >
-                    <Button
-                      sx={[
-                        {
-                          bgcolor: "#fff",
-                          padding: "10px 20px",
-                          borderRadius: "10px",
-                        },
-                      ]}
-                    >
-                      Карточка фильма
-                    </Button>
-                  </Box>
-                </Box>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
-                    },
-                    lineHeight: "22px",
-                    color: "#FFF",
-                  }}
-                >
-                  Джентльмены
-                </Typography>
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"15px",
-                      Planshet:'15px',
-                      Phone:"10px"
-                    },
-                    lineHeight: "18px",
-                    color: "#F2F60F",
-                  }}
-                >
-                  Боевик, комедия, криминал
-                </Typography>
-              </Box>
-            </Box>
-          </Box>
-          <Box sx={{
-                display: {
-                  NoteL: "none",
-                  Planshet: "none",
-                  Phone: "block",
-                },
-              }}>
-            <Box width={"90%"} mt="5%" display={"flex"} gap={"10px"} sx={{
-            marginLeft:{
-              Planshet:"0px",
-              NoteL:"0px",
-              Phone:"20px"
-            }
-          }}>
-            <Box sx={{
-                display: {
-                  NoteL: "none",
-                  Planshet: "none",
-                  Phone: "block",
-                },
-              }}>
-                <Box
-                  borderRadius={"10px"}
-                  width="100%"
-                  overflow={"hidden"}
-                  height={"450px"}
-                  position={"relative"}
-                  sx={{
-                    width: {
-                      NoteL: "320px",
-                      Planshet: "180px",
-                    },
-                    height: {
-                      NoteL: "450px",
-                      Planshet: "290px",
-                    },
-                  }}
-                >
-                  <img
-                    src={Xarli}
-                    alt=""
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        height: "100%",
-                        bgcolor: "transparent",
-                        position: "absolute",
-                        top: "300px",
-                        zIndex: "10",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      },
-                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
-                    ]}
-                  >
-                    <Button
-                      sx={[
-                        {
-                          bgcolor: "#fff",
-                          padding: "10px 20px",
-                          borderRadius: "10px",
-                        },
-                      ]}
-                    >
-                      Карточка фильма
-                    </Button>
-                  </Box>
-                </Box>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
-                    },
-                    lineHeight: "22px",
-                    color: "#FFF",
-                  }}
-                >
-                  Звёздные войны
-                </Typography>
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"15px",
-                      Planshet:'15px',
-                      Phone:"10px"
-                    },
-                    lineHeight: "18px",
-                    color: "#F2F60F",
-                  }}
-                >
-                  Фантастика, фэнтези,
-                </Typography>
-              </Box>
-              <Box sx={{
-                display: {
-                  NoteL: "none",
-                  Planshet: "none",
-                  Phone: "block",
-                },
-              }}>
-                <Box
-                  borderRadius={"10px"}
-                  width="100%"
-                  overflow={"hidden"}
-                  height={"450px"}
-                  position={"relative"}
-                  sx={{
-                    width: {
-                      NoteL: "320px",
-                      Planshet: "180px",
-                    },
-                    height: {
-                      NoteL: "450px",
-                      Planshet: "290px",
-                    },
-                  }}
-                >
-                  <img
-                    src={Police}
-                    alt=""
-                    style={{ width: "100%", height: "100%" }}
-                  />
-                  <Box
-                    sx={[
-                      {
-                        width: "100%",
-                        height: "100%",
-                        bgcolor: "transparent",
-                        position: "absolute",
-                        top: "300px",
-                        zIndex: "10",
-                        display: "flex",
-                        justifyContent: "center",
-                        alignItems: "center",
-                      },
-                      { "&:hover": { bgcolor: "#3657CBA6", top: "1px" } },
-                    ]}
-                  >
-                    <Button
-                      sx={[
-                        {
-                          bgcolor: "#fff",
-                          padding: "10px 20px",
-                          borderRadius: "10px",
-                        },
-                      ]}
-                    >
-                      Карточка фильма
-                    </Button>
-                  </Box>
-                </Box>
-                <Typography
-                  variant="h5"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"18px",
-                      Planshet:"18px",
-                      Phone:"14px"
-                    },
-                    lineHeight: "22px",
-                    color: "#FFF",
-                  }}
-                >
-                  Джентльмены
-                </Typography>
-                <Typography
-                  variant="p"
-                  sx={{
-                    fontStyle: "normal",
-                    fontFamily: "-moz-initial",
-                    fontWeight: "400",
-                    fontSize: {
-                      NoteL:"15px",
-                      Planshet:'15px',
-                      Phone:"10px"
-                    },
-                    lineHeight: "18px",
-                    color: "#F2F60F",
-                  }}
-                >
-                  Боевик, комедия, криминал
-                </Typography>
-              </Box>
-              <Box sx={{
-                display: {
-                  NoteL: "none",
-                  Planshet: "none",
-                  Phone: "block",
-                },
-              }}>
-            <Box borderRadius="10px" overflow={"hidden"} sx={{
-                width:{
-                  NoteL:'330px',
-                  Planshet:'180px'
-                },
-                height:{
-                  NoteL:'450px',
-                  Planshet:'300px'
-                }
-            }}>
-              <img src={istoriya} alt="" style={{width:'100%',height:'100%'}}/>
-            </Box>
-            <Typography
-              variant="h5"
-              sx={{
-                fontStyle: "normal",
-                fontFamily: "-moz-initial",
-                fontWeight: "400",
-                fontSize: {
-                  NoteL:"18px",
-                  Planshet:"18px",
-                  Phone:"14px"
-                },
-                lineHeight: "22px",
-                color: "#FFF",
-              }}
-            >
-                История игрушек 4
-            </Typography>
-            <Typography variant="p"
-               sx={{
-                fontStyle: "normal",
-                fontFamily: "-moz-initial",
-                fontWeight: "400",
-                fontSize: {
-                  NoteL:"15px",
-                  Planshet:'15px',
-                  Phone:"10px"
-                },
-                lineHeight: "18px",
-                color: "#F2F60F",
-              }}>
-            Мультфильм, фэнтези
-            </Typography>
-          </Box>
             </Box>
           </Box>
           <Link to="/Films" style={{ margin: "50px" }}>
@@ -1303,7 +1369,11 @@ class Content extends Component {
               sx={{
                 border: "1px solid #fff",
                 color: "#fff",
-                padding: {NoteL:"10px 20px",Planshet:"10px 20px",Phone:"5px 10px"},
+                padding: {
+                  NoteL: "10px 20px",
+                  Planshet: "10px 20px",
+                  Phone: "5px 10px",
+                },
                 mt: "5%",
               }}
             >

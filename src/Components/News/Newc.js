@@ -21,6 +21,7 @@ class Newc extends Component {
           display={"flex"}
           justifyContent={"space-between"}
           alignItems={"center"}
+
           mt="50px"
         >
           <Typography
@@ -31,7 +32,8 @@ class Newc extends Component {
               fontWeight: "900",
               fontSize: {
                 NoteL:'65px',
-                Planshet:'40px'
+                Planshet:'40px',
+                Phone:"25px"
               },
               lineHeight: "80px",
               color: "#fff",
@@ -47,14 +49,16 @@ class Newc extends Component {
               fontWeight: "700",
               fontSize: {
                 NoteL:"22px",
-                Planshet:'18px'
+                Planshet:'18px',
+                Phone:"10px"
               },
               lineHeight: "27px",
               color: "#fff",
               mt: "12px",
               ml: {
                 Planshet:'200px',
-                NoteL:"700px"
+                NoteL:"700px",
+                Phone:"50px"
               },
             }}
           >
@@ -81,6 +85,10 @@ class Newc extends Component {
               NoteL:"row"
             },ml:{
               Planshet:"10px"
+            },flexWrap:{
+              NoteL:'nowrap',
+              Planshet:"nowrap",
+              Phone:"wrap"
             }
           }}
         >
@@ -105,7 +113,8 @@ class Newc extends Component {
               sx={{
                 position:{
                   Planshet:"absolute",
-                  NoteL:'absolute'
+                  NoteL:'absolute',
+                  Phone:"absolute"
                 },
                 left:{
                   Planshet:"10px",
@@ -113,7 +122,8 @@ class Newc extends Component {
                 },
                 top:{
                   Planshet:'300px',
-                  NoteL:"600px"
+                  NoteL:"600px",
+                  Phone:"150px"
                 },fontSize:{
                   Planshet:"30px",
                   NoteL:'40px'
@@ -133,7 +143,8 @@ class Newc extends Component {
               sx={{
                 position:{
                   Planshet:"absolute",
-                  NoteL:'absolute'
+                  NoteL:'absolute',
+                  Phone:"absolute"
                 },
                 left:{
                   Planshet:"10px",
@@ -141,7 +152,9 @@ class Newc extends Component {
                 },
                 top:{
                   Planshet:'350px',
-                  NoteL:"650px"
+                  NoteL:"650px",
+                  Phone:"170px"
+                  
                 },fontSize:{
                   Planshet:"18px",
                   NoteL:"20px"

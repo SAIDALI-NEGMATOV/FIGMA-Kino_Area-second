@@ -20,9 +20,28 @@ class Context extends Component {
           display={"flex"}
           justifyContent="center"
           alignItems={"center"}
-          gap="40px"
+          sx={{
+            flexWrap:{
+              NoteL:"nowrap",
+              Planshet:"nowrap",
+              Phone:"wrap"
+            },justifyContent:{
+              NoteL:"center",
+              Planshet:"center",
+              Phone:"flex-start"
+            },gap:{
+              NoteL:"40px",
+              Planshet:"40px",
+              Phone:"10px"
+            },paddingTop:{
+              NoteL:"30px",
+              Planshet:"30px",
+              Phone:"10px"
+            }
+          }}
           pt={"30px"}
           mt='30px'
+
         >
           <Typography
             variant="h2"
@@ -33,7 +52,7 @@ class Context extends Component {
               fontSize:{
                 Planshet:"20px",
                 NoteL:'65px',
-                Phone:'10px'
+                Phone:'30px'
               },
               lineHeight: "80px",
               color: "#fff",
@@ -44,8 +63,9 @@ class Context extends Component {
           </Typography>
           <Box width={"100px"} borderTop={"1px solid #fff"} mt="10px" sx={{
             display:{
+              NoteL:'block',
               Planshet:'none',
-              NoteL:'block'
+              Phone:"none"
             }
           }}></Box>
           <Typography
@@ -76,7 +96,11 @@ class Context extends Component {
               },
               lineHeight: "22px",
 
-              mt: "10px",
+              mt: {
+                NoteL:"10px",
+                Planshet:"10px",
+                Phone:"0px"
+              },
             }}
           >
             2020
@@ -92,7 +116,11 @@ class Context extends Component {
               },
               lineHeight: "22px",
 
-              mt: "10px",
+              mt: {
+                NoteL:"10px",
+                Planshet:"10px",
+                Phone:"0px"
+              },
             }}
           >
             2019
@@ -107,7 +135,11 @@ class Context extends Component {
                 NoteL:'18px'
               },
               lineHeight: "22px",
-              mt: "10px",
+              mt: {
+                NoteL:"10px",
+                Planshet:"10px",
+                Phone:"0px"
+              },
             }}
           >
             2018
@@ -123,7 +155,11 @@ class Context extends Component {
               },
               lineHeight: "22px",
 
-              mt: "10px",
+              mt: {
+                NoteL:"10px",
+                Planshet:"10px",
+                Phone:"0px"
+              },
             }}
           >
             2017
@@ -138,7 +174,11 @@ class Context extends Component {
                 NoteL:'18px'
               },
               lineHeight: "22px",
-              mt: "10px",
+              mt: {
+                NoteL:"10px",
+                Planshet:"10px",
+                Phone:"0px"
+              },
             }}
           >
             {" "}
@@ -155,7 +195,11 @@ class Context extends Component {
               },
               lineHeight: "22px",
 
-              mt: "10px",
+              mt: {
+                NoteL:"10px",
+                Planshet:"10px",
+                Phone:"0px"
+              },
             }}
           >
             2016
@@ -171,11 +215,12 @@ class Context extends Component {
             <Box borderRadius="15px" overflow={"hidden"} sx={{
                 width:{
                   NoteL:'330px',
-                  Planshet:'180px'
+                  Planshet:'180px',
+                  Phone:"130px",
                 },
                 height:{
                   NoteL:'450px',
-                  Planshet:'300px'
+                  Planshet:'290px'
                 }
             }}>
               <img src={jokker2} alt="" style={{width:'100%',height:'100%'}}/>
@@ -186,7 +231,11 @@ class Context extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "18px",
+                fontSize: {
+                  NoteL:"18px",
+                  Planshet:"18px",
+                  Phone:"14px"
+                },
                 lineHeight: "22px",
                 color: "#FFF",
               }}
@@ -198,22 +247,27 @@ class Context extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "15px",
+                fontSize: {
+                  NoteL:"15px",
+                  Planshet:'15px',
+                  Phone:"10px"
+                },
                 lineHeight: "18px",
                 color: "#F2F60F",
               }}>
-            Триллер, драма, криминал
+            Триллер, драма
             </Typography>
           </Box>
           <Box>
             <Box borderRadius="15px" overflow={"hidden"} sx={{
                 width:{
                   NoteL:'330px',
-                  Planshet:'180px'
+                  Planshet:'180px',
+                  Phone:"130px",
                 },
                 height:{
                   NoteL:'450px',
-                  Planshet:'300px'
+                  Planshet:'290px'
                 }
             }}>
               <img src={istoriya} alt="" style={{width:'100%',height:'100%'}}/>
@@ -224,7 +278,11 @@ class Context extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "18px",
+                fontSize: {
+                  NoteL:"18px",
+                  Planshet:"18px",
+                  Phone:"14px"
+                },
                 lineHeight: "22px",
                 color: "#FFF",
               }}
@@ -236,7 +294,11 @@ class Context extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "15px",
+                fontSize: {
+                  NoteL:"15px",
+                  Planshet:'15px',
+                  Phone:"10px"
+                },
                 lineHeight: "18px",
                 color: "#F2F60F",
               }}>
@@ -247,11 +309,12 @@ class Context extends Component {
             <Box borderRadius="15px" overflow={"hidden"} sx={{
                 width:{
                   NoteL:'330px',
-                  Planshet:'180px'
+                  Planshet:'180px',
+                   Phone:"130px",
                 },
                 height:{
                   NoteL:'450px',
-                  Planshet:'300px'
+                  Planshet:'290px'
                 }
             }}>
               <img src={gallivud} alt="" style={{width:'100%',height:'100%'}}/>
@@ -262,7 +325,11 @@ class Context extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "18px",
+                fontSize: {
+                  NoteL:"18px",
+                  Planshet:"18px",
+                  Phone:"14px"
+                },
                 lineHeight: "22px",
                 color: "#FFF",
               }}
@@ -274,23 +341,32 @@ class Context extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "15px",
+                fontSize: {
+                  NoteL:"15px",
+                  Planshet:'15px',
+                  Phone:"10px"
+                },
                 lineHeight: "18px",
                 color: "#F2F60F",
               }}>
             Драма, комедия
             </Typography>
           </Box>
-          <Box>
+          <Box sx={{display:{
+                  NoteL:"block",
+                  Planshet:"block",
+                  Phone:"none",
+                }}}>
             <Box borderRadius="15px" overflow={"hidden"}sx={{
                 width:{
                   NoteL:'330px',
-                  Planshet:'180px'
+                  Planshet:'180px',
+                  Phone:"130px",
                 },
                 height:{
                   NoteL:'450px',
-                  Planshet:'300px'
-                }
+                  Planshet:'290px'
+                },
             }}>
               <img src={sol} alt="" style={{width:'100%',height:'100%'}}/>
             </Box>
@@ -300,7 +376,11 @@ class Context extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "18px",
+                fontSize: {
+                  NoteL:"15px",
+                  Planshet:'15px',
+                  Phone:"10px"
+                },
                 lineHeight: "22px",
                 color: "#FFF",
               }}
@@ -312,7 +392,11 @@ class Context extends Component {
                 fontStyle: "normal",
                 fontFamily: "-moz-initial",
                 fontWeight: "400",
-                fontSize: "15px",
+                fontSize: {
+                  NoteL:"15px",
+                  Planshet:'15px',
+                  Phone:"10px"
+                },
                 lineHeight: "18px",
                 color: "#F2F60F",
               }}>

@@ -15,7 +15,7 @@ class Components extends Component {
   render() {
     return (
       <Box>
-          <Content />
+          <Content films={this.props.films}/>
           <Hame />
           <Custom />
           <Context />

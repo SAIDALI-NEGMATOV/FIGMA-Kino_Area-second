@@ -14,8 +14,21 @@ import Podbor from "./Podborki/Podbor";
 import theme from "./Components/Style/Style";
 import Films from "./Films/Films";
 import Actors from "./Actors/Actors";
+import { ItemProduct } from "./Components/ItemProduct";
 
+function DataFilms(id,name){
+  return{id,name}
+}
 
+let films = [
+  DataFilms(1,"Jokker1"),
+  // DataFilms(2,"Jokker2"),
+  // DataFilms(3,"Jokker3"),
+  // DataFilms(4,"Jokker4"),
+  // DataFilms(5,"Jokker5"),
+  // DataFilms(6,"Jokker6"),
+  // DataFilms(7,"Jokker7"),
+] 
 
 class App extends Component {
   render() {
@@ -24,7 +37,8 @@ class App extends Component {
       <Box overflow={"hidden"}>
         <Nav />
         <Routes>
-          <Route path="/" element={<Components/>} />
+          <Route path="/" element={<Components films={films}/>} />
+          <Route path="//:id" element={<ItemProduct films={films}/>} />
           <Route path="/afisha" element={<Afisha />} />
           <Route path="/media" element={<Media/>}/>
           <Route path="/news" element={<News/>}/>
@@ -35,6 +49,7 @@ class App extends Component {
           <Route path='/Podbor' element={<Podbor/>}/>
           <Route path='/Films' element={<Films/>}/>
           <Route path='/Actors' element={<Actors/>}/>
+          {/* <Route path="*" element={} /> */}
         </Routes>
       </Box>
       </ThemeProvider>

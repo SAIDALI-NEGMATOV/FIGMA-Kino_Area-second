@@ -18,6 +18,17 @@ class Personaj extends Component {
           justifyContent={"space-between"}
           alignItems={"center"}
           mt="50px"
+          sx={{
+            flexWrap:{
+              NoteL:'nowrap',
+              Planshet:"nowrap",
+              Phone:"wrap"
+            },justifyContent:{
+              NoteL:"space-between",
+              Planshet:"space-between",
+              Phone:"flex-start"
+            }
+          }}
         >
           <Typography
             variant="h2"
@@ -27,7 +38,8 @@ class Personaj extends Component {
               fontWeight: "900",
               fontSize: {
                 Planshet:'30px',
-                NoteL:'65px'
+                NoteL:'65px',
+                Phone:'40px'
               },
               lineHeight: "80px",
               color: "#fff",
@@ -99,15 +111,25 @@ class Personaj extends Component {
           justifyContent="center"
           alignItems={"center"}
           gap="20px"
+          sx={{
+            flexWrap:{
+              NoteL:"nowrap",
+              Planshet:"nowrap",
+              Phone:"wrap"
+            }
+          }}
         >
           <Box position={"relative"}sx={{
            width:{
             Planshet:'230px',
-            NoteL:'450px'
+            NoteL:'450px',
+            Phone:"200px",
+            
           },
           height:{
             Planshet:'230px',
-            NoteL:'400px'
+            NoteL:'400px',
+            Phone:"200"
           },
           
           
@@ -141,7 +163,8 @@ class Personaj extends Component {
                 color: "#FFF",
                 top: {
                   NoteL:'330px',
-                  Planshet:'140px'
+                  Planshet:'140px',
+                  Phone:"140px"
                 },
               }}
             >
@@ -162,7 +185,8 @@ class Personaj extends Component {
                 color: "rgba(255, 255, 255, 0.35)",
                 top: {
                   NoteL:'360px',
-                  Planshet:'160px'
+                  Planshet:'160px',
+                  Phone:"160px"
                 },
               }}
             >
@@ -178,7 +202,8 @@ class Personaj extends Component {
                 fontSize: "15px",
                 top: {
                   NoteL:'380px',
-                  Planshet:"180px"
+                  Planshet:"180px",
+                  Phone:"180px"
                 },
                 lineHeight: "18px",
                 color: "#F2F60F",
@@ -191,10 +216,12 @@ class Personaj extends Component {
           <Box position={"relative"} sx={{
             width:{
               Planshet:'230px',
-              NoteL:'450px'
+              NoteL:'450px',
+              Phone:"200px"
             }, height:{
               Planshet:'230px',
-              NoteL:'400px'
+              NoteL:'400px',
+              Phone:"200px"
             },
           
           }}>
@@ -228,7 +255,8 @@ class Personaj extends Component {
                 color: "#FFF",
                 top: {
                   NoteL:'330px',
-                  Planshet:'140px'
+                  Planshet:'140px',
+                  Phone:"140px"
                 },
               }}
             >
@@ -249,7 +277,8 @@ class Personaj extends Component {
                 color: "rgba(255, 255, 255, 0.35)",
                 top: {
                   NoteL:'360px',
-                  Planshet:'160px'
+                  Planshet:'160px',
+                  Phone:"160px"
                 },
               }}
             >
@@ -265,7 +294,8 @@ class Personaj extends Component {
                 fontSize: "15px",
                 top: {
                   NoteL:'380px',
-                  Planshet:"180px"
+                  Planshet:"180px",
+                  Phone:"180px"
                 },
                 lineHeight: "18px",
                 color: "#F2F60F",
@@ -285,7 +315,8 @@ class Personaj extends Component {
             sx={{
               width:{
                 NoteL:'400px',
-                Planshet:"250px"
+                Planshet:"250px",
+                Phone:"405px"
               },height:{
                 NoteL:"400px",
                 Planshet:'230px'
@@ -473,7 +504,8 @@ class Personaj extends Component {
               },
               display:{
                 Planshet:'none',
-                NoteL:'flex'
+                NoteL:'flex',
+                Phone:"flex"
               }
             }}>
               <Box
