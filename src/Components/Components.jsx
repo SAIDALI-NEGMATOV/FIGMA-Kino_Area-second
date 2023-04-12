@@ -1,5 +1,5 @@
 import { Box } from "@mui/material";
-import React, { Component } from "react";
+import React from 'react'
 import Content from '../Components/Content/Content'
 import Hame from '../Components/Home/Hame'
 import Custom from '../Components/Custom/Custom'
@@ -11,11 +11,14 @@ import Client from '../Components/Client/Client'
 import Email from '../Components/E-mail/Email'
 import End from '../Components/End/End'
 
-class Components extends Component {
-  render() {
-    return (
-      <Box>
-          <Content films={this.props.films}/>
+
+
+
+
+export const Components = ({films}) => {
+  return (
+    <Box>
+          <Content films={films}/>
           <Hame />
           <Custom />
           <Context />
@@ -26,8 +29,5 @@ class Components extends Component {
           <Email />
           <End />
       </Box>
-    );
-  }
+  )
 }
-
-export default Components;
