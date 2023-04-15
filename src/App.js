@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, ThemeProvider } from "@mui/material";
+import { Box, Button, ThemeProvider } from "@mui/material";
 import Nav from "./Components/Nav/Nav";
 import { Route, Routes } from "react-router";
 import Afisha from "./Afisha/Afisha";
@@ -26,6 +26,11 @@ import img8 from "./Components/images/Police.jpg";
 import bgIMG from "./Components/images/BGA1.jpg";
 import Static from "./Components/images/Statistic.png";
 import Static2 from "./Components/images/IMDb.png";
+import Play from './Components/images/Play3.png'
+import Icon from './Components/images/Mini Icon.png'
+import Ocenka from './Components/images/Ocenka.png'
+import Like from './Components/images/Reyting.png'
+import Back from './Components/images/123321.jpg'
 
 function DataFilms(
   id,
@@ -40,7 +45,12 @@ function DataFilms(
   Info,
   Static,
   Static2,
-  Text2
+  Text2,
+  Button,
+  Icon,
+  Ball,
+  Ball2,
+  Table
 ) {
   return {
     id,
@@ -56,6 +66,11 @@ function DataFilms(
     Static,
     Static2,
     Text2,
+    Button,
+    Icon,
+    Ball,
+    Ball2,
+    Table
   };
 }
 
@@ -73,9 +88,16 @@ let films = [
     "Escape from Pretoria",
     Static,
     Static2,
-    "Двое борцов за свободу отбывают срок в одной из самых строгих тюрем мира — в «Претории». Вместе с другими узниками они планируют дерзкий и опасный побег. Но придумать план — это только первый шаг. Шаг второй — реализация плана."
+    "Двое борцов за свободу отбывают срок в одной из самых строгих тюрем мира — в «Претории». Вместе с другими узниками они планируют дерзкий и опасный побег. Но придумать план — это только первый шаг. Шаг второй — реализация плана.",
+    <Button sx={{border:"1px solid #fff",padding:"10px 15px",mt:"10px",borderRadius:"5px"}}><Box mt='5px'mr={'5px'}><img src={Play} alt="" /></Box> Смотреть трейлер</Button>,
+    Icon,    
+    Ocenka,
+    Like,
+    <table>
+      <th></th>
+    </table>
   ),
-  DataFilms(2, "Joker", img1, "Джокер", "Триллер, драма, криминал"),
+  DataFilms(2, "Joker", img1, "Джокер", "Триллер, драма, криминал", Back),
   DataFilms(
     3,
     "Star",
